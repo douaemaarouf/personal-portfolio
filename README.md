@@ -4,7 +4,7 @@
 
 **You are required to use the provided JavaScript snippets** to implement your interactivity. **No exceptions.**  You may not use any other methods, including methods from online tutorials or generative AI.
 
-## Project3 Document Summary
+## Project 3 Document Summary
 
 Be sure to read thoroughly and follow carefully **all** the requirements and steps in each of the project documents.
 
