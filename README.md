@@ -26,6 +26,7 @@ Be sure to read thoroughly and follow carefully **all** the requirements and ste
 **Interactivity Coding Resources:**
 
 - [Project 3 > Interactivity Snippets](https://github.coecis.cornell.edu/info1300-spring25/info1300-2025sp-resources/tree/main/assignments/project3/p3-interactivity-snippets.md)
+- [MDN > Z-Index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
 
 ## Project 3 Submission
 
