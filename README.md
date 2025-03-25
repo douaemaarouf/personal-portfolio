@@ -8,7 +8,7 @@
 
 Be sure to read thoroughly and follow carefully **all** the requirements and steps in each of the project documents.
 
-- [Group Project > Documents Repo](https://github.coecis.cornell.edu/info1300-spring25/info1300-2025sp-resources/tree/main/assignments/project3)
+- [Project 3 > Documents Repo](https://github.coecis.cornell.edu/info1300-spring25/info1300-2025sp-resources/tree/main/assignments/project3)
 
 ## Deadlines
 
