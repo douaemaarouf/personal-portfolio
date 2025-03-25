@@ -2,7 +2,7 @@
 
 **Incorporate interactivity into an existing website.** Add a hamburger drop-down navigation menu and a modal to either to your Project 1 or Project 2 to enhance the usability of the website.
 
-**You are required to use the provided JavaScript snippets** to implement your interactivity. **No exceptions.**
+**You are required to use the provided JavaScript snippets** to implement your interactivity. **No exceptions.**  You may not use any other methods, including methods from online tutorials or generative AI.
 
 ## Project3 Document Summary
 
