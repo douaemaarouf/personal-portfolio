@@ -848,7 +848,7 @@ body {
 
   /* hamburger menu styles */
 .hamburger {
-  display: block; 
+  display: block;
   background: none;
   border: none;
   cursor: pointer;
@@ -969,4 +969,8 @@ body {
 /* prevent scrolling when modal is open */
 .no-scroll {
   overflow: hidden;
+}
+
+.hidden {
+  display: none;
 }
