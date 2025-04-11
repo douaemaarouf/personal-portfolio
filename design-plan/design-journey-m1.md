@@ -12,7 +12,7 @@
 ## Project
 > Which project will you add interactivity to enhance the site's functionality?
 
-Project (TODO: 1 or 2)
+Project (1)
 
 
 ## Audience's Goals
@@ -20,19 +20,21 @@ Project (TODO: 1 or 2)
 > Simply list each goal. No need to include the "Design Ideas and Choices", etc.
 > You may adjust the goals if necessary.
 
-- TODO: goal 1
-- TODO: goal 2
-- TODO: ...
-
+- To learn about my educational background and professional experience
+- To view examples of my work and projects
+- To understand my skills and expertise
+- To find ways to contact me for professional opportunities
+- To get a sense of my personality and interests beyond my professional work
 
 ## Modal Interactivity Brainstorm
-> Using the audience goals you identified, brainstorm possible options for **modal** interactivity to enhance the functionality of the site while also assisting the audience with their goals.
-> Briefly explain each idea and provide a brief rationale for how the interactivity enhances the site's functionality for the audience. (1 sentence)
+  > Using the audience goals you identified, brainstorm possible options for **modal** interactivity to enhance the functionality of the site while also assisting the audience with their goals.
+  > Briefly explain each idea and provide a brief rationale for how the interactivity enhances the site's functionality for the audience. (1 sentence)
 > Note: You may find it easier to sketch for brainstorming. That's fine too. Do whatever you need to do to explore your ideas.
 
-- TODO: idea 1
-- TODO: idea 2
-- TODO: ...
+- Portfolio Project Modal: When visitors click on a project thumbnail in my portfolio page, a modal will open showing detailed project information, including larger images, my role, technologies used, and outcomes. This enhances the site's functionality by allowing visitors to get in-depth information without navigating away from the portfolio overview.
+- Skills Detail Modal: When visitors click on a skill or technology I list on my about page, a modal will display detailed information about my experience with that skill, including projects where I've applied it and my proficiency level. This helps potential employers or collaborators better understand my technical capabilities.
+- A "Contact Me" button that opens a modal with a contact form, saving visitors from having to navigate to a separate contact page. This streamlines the process for reaching out to me, making it more likely that visitors will initiate contact.
+- A button on my home or about page that opens a modal preview of my full resume/CV, allowing visitors to view my qualifications without downloading a file or navigating away. This provides quick access to my professional credentials.
 
 
 ## Interactivity Design Ideation
@@ -41,7 +43,13 @@ Project (TODO: 1 or 2)
 > Annotate each sketch explaining what happens when a user takes an action. (e.g. When user clicks this, something else appears.)
 > Do not include HTML/CSS annotations in your sketches!
 
-TODO: design sketches
+**MODAL**
+![](IMG_0549.jpg)
+![](IMG_0551.jpg)]
+
+**HAMBURGER**
+![](IMG_0553.jpg)
+![](IMG_0555.jpg)]
 
 
 ## Final Interactivity Design Sketches
@@ -53,11 +61,13 @@ TODO: design sketches
 
 **Modal design sketches:**
 
-TODO: final design sketch(es)
+![](IMG_0550.jpg)
+![](IMG_0552.jpg)
 
 **Hamburger drop-down navigation menu design sketches:**
 
-TODO: final design sketch(es)
+![](IMG_0554.jpg)
+![](IMG_0556.jpg)
 
 
 ## Interactivity Rationale
@@ -65,7 +75,7 @@ TODO: final design sketch(es)
 > Provide a brief rationale explaining how your proposed interactivity addresses the goals of your site's audience.
 > This should be about a paragraph. (2-3 sentences)
 
-TODO: design rationale
+The modal interactivity for portfolio projects enhances my website by allowing visitors to explore detailed information about my work without navigating away from the portfolio overview. This addresses my audience's goal of efficiently viewing my work while maintaining context. The hamburger menu improves usability on mobile devices by providing a clean, space-saving navigation solution that ensures all content remains accessible across different screen sizes, supporting the audience's goal of easily exploring my complete website regardless of their device.
 
 
 ## Interactivity Planning Sketches
@@ -75,11 +85,11 @@ TODO: design rationale
 
 **Modal planning sketches:**
 
-TODO: planning sketch(es)
+![](IMG_0558.jpg)
 
 **Hamburger drop-down navigation menu planning sketches:**
 
-TODO: planning sketch(es)
+![](IMG_0559.jpg)
 
 
 ## Interactivity Pseudocode Plan
@@ -91,13 +101,19 @@ TODO: planning sketch(es)
 > Pseudocode to open the modal:
 
 ```
-TODO: pseudocode
+Identify which project was clicked
+Find the corresponding modal content
+Add class "show-modal" to modal overlay
+Add class "show-modal" to the specific modal content
+Add class "no-scroll" to body to prevent background scrolling
 ```
 
 > Pseudocode to close the modal:
 
 ```
-TODO: pseudocode
+Remove class "show-modal" from modal overlay
+Remove class "show-modal" from all modal content
+Remove class "no-scroll" from body to allow scrolling again
 ```
 
 **Hamburger menu pseudocode:**
@@ -105,11 +121,12 @@ TODO: pseudocode
 > Pseudocode to show/hide (toggle) the navigation menu (narrow screens) when the hamburger button is clicked:
 
 ```
-when the hamburger button is clicked:
-  if the navigation menu is not visible:
-    TODO: pseudocode
-  else:
-    TODO: pseudocode
+if the navigation menu is not visible:
+  Add class "show-nav" to the navigation menu
+  Add class "active" to hamburger button to transform to X
+else:
+  Remove class "show-nav" from the navigation menu
+  Remove class "active" from hamburger button to return to hamburger icon
 ```
 
 > Media queries are prohibited to show/hide the hamburger menu for this assignment.
@@ -119,22 +136,25 @@ when the hamburger button is clicked:
 > Complete the pseudocode to show/hide (toggle) the navigation on page load:
 
 ```
-on page load (ready):
-  if window is narrow:
-    TODO: pseudocode
-   else if window is wide:
-     TODO: pseudocode
+if window width is less than 768px:
+  Add class "hidden" to navigation menu
+  Add class "visible" to hamburger button
+else if window width is 768px or greater:
+  Remove class "hidden" from navigation menu
+  Add class "hidden" to hamburger button
+
 ```
 
 > If the browser window is resized from wide to narrow, the hamburger menu should become visible and the navigation should be hidden.
 > If the browser window is resized from narrow to wide, the hamburger menu should become hidden and the navigation should be visible.
 
 ```
-on window resize:
-  if window is narrow:
-    TODO: pseudocode
-  else if window is wide:
-    TODO: pseudocode
+if window width is less than 768px:
+  Add class "hidden" to navigation menu
+  Add class "visible" to hamburger button
+else if window width is 768px or greater:
+  Remove class "hidden" from navigation menu
+  Add class "hidden" to hamburger button
 ```
 
 
@@ -143,7 +163,7 @@ on window resize:
 ### Collaborators
 > List any persons you collaborated with on this project.
 
-TODO: list your collaborators
+No one.
 
 
 ### Reference Resources
@@ -153,4 +173,6 @@ TODO: list your collaborators
 > List **all** resources you used (websites, articles, books, etc.), including generative AI.
 > Provide the URL to the resources you used and include a short description of how you used each resource.
 
-TODO: list reference resources
+(https://developer.mozilla.org/en-US/docs/Web/CSS/z-index) : Used to understand how to properly layer the modal overlay and
+
+(https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event) : Used to understand the window resize event for responsive hamburger menu
