@@ -79,7 +79,7 @@ I did not colleaborate with anyone.
 (https://www.w3schools.com/howto/howto_js_modal.asp) - Referenced for understanding modal functionality principles
 
 (https://chat.openai.com) -
-Assisted with debugging my interactivity JS file, specifically to teach me how to get my modal to stop popping up so soon
+Assisted with debugging my interactivity JS file, specifically to teach me how to get my modal to stop popping up so soon. Also used it to help me filter out redundancy in my CSS file and optimize it. All suggestions were understood and customized to fit the class guidelines and my original content.
 
 (https://www.youtube.com/watch?v=POX3dT-pB4E) -
 Used to help me understand how to build the typewriter animation on the homepage, especially for timing out each character and looping with a pause after completion.
