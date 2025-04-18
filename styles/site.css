@@ -874,6 +874,7 @@ body {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+
 /* hamburger toggle classes */
 #hamburger-btn.hidden {
   display: none !important;
@@ -925,20 +926,26 @@ body {
   padding: 0 10px;
 }
 
+
 .close-btn,
 #close-menu {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 24px;
+  font-size: 28px;
   background: none;
   border: none;
   cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  color: #333;
 }
+
 .close-btn:hover,
 #close-menu:hover {
-  color: #555;
+  transform: rotate(90deg) scale(1.2);
+  color: #ff4444;
 }
+
 
 /* modal menu */
 #menu-modal {
@@ -1192,4 +1199,43 @@ nav a:hover {
   .learning-columns {
     flex-direction: row;
   }
+}
+
+/* hamburger menu behaviour */
+
+#hamburger-btn:hover {
+  animation: pop 0.25s ease;
+}
+
+#hamburger-btn:hover .hamburger-line {
+  background-color: #0066cc;
+  transform: scaleX(1.1);
+}
+
+#hamburger-btn:active .hamburger-line {
+  transform: scaleX(0.95);
+  opacity: 0.8;
+}
+
+.hamburger-line {
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* typing cursor style */
+.cursor {
+  display: inline-block;
+  font-weight: 500;
+  color: #1d1d1f;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }

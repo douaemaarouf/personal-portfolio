@@ -27,7 +27,7 @@ $(document).ready(function () {
     e.preventDefault();
     const projectId = $(this).data("project");
     console.log("Opening modal for project:", projectId);
-    openModal(this); // 👈 This calls the function defined below
+    openModal(this);
   });
 
   $("#close-modal").on("click", function () {
@@ -43,6 +43,30 @@ $(document).ready(function () {
       $("body").removeClass("no-scroll");
     }
   });
+
+  function typeWriterEffect(elementId, text, speed = 100, delay = 2000) {
+    const element = document.getElementById(elementId);
+    const chars = Array.from(text);
+    let index = 0;
+
+    function type() {
+      if (index < chars.length) {
+        element.textContent += chars[index];
+        index++;
+        setTimeout(type, speed);
+      } else {
+        setTimeout(() => {
+          element.textContent = "";
+          index = 0;
+          setTimeout(type, restartDelay);
+      }, endPause);
+      }
+    }
+
+    type();
+  }
+
+  typeWriterEffect("typewriter-text", "Hey hey, I'm Douae! 👋", 100, 3000, 800);
 });
 
 function openModal(clickedElement) {
