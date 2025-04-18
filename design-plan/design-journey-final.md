@@ -35,6 +35,13 @@ You can find interactivity implemented on these following pages:
       - Hamburger Menu: On narrow screens, a hamburger icon will replace the nav menu in the top right corner to open a full-screen menu.
       - Close Menu: You can click on the “×” icon or outside the menu to close it.
 
+    Global styling
+       - Hover Animations: Elements like case studies, gallery items, professional links, and writing items include hover effects with smooth scaling and shadow transitions.
+       - Modal/Overlay Transitions: Modals and menu overlays use smooth fade-in and slide transitions for accessible and responsive interactivity.
+
+    index.html
+         - Typewriter Effect: The homepage headline includes a typewriter animation that types “Hey hey, I'm Douae! 👋” with a looping effect.
+
     2. portfolio.html:
        - Case Study Modals: If you click on any case study thumbnail in the “Marketing & Product Design Case Studies” section, a modal will open up with additional content and images.
        - Close Modal: You can click on the “×” icon or outside the modal area to close it.
@@ -48,7 +55,7 @@ Through this assignment, I've learned how to create effective client-side intera
 
 > Take some time here to reflect on how much you've learned since you started this class. It's often easy to ignore our own progress. Take a moment and think about your accomplishments in this class. Hopefully you'll recognize that you've accomplished a lot and that you should be very proud of those accomplishments! (1-3 sentences)
 
-Since starting this class, I've progressed from basic HTML structures to creating fully responsive websites with meaningful interactive elements. I've developed a deeper understanding of the relationship between HTML, CSS, and JavaScript, and how they work together to create engaging user experiences. I'm proud of my ability to not just code a website, but to design thoughtful interactions that truly serve the user's needs.
+Since starting this class, I've progressed from basic HTML structures to creating fully responsive websites with really cool interactive elements. I've definetely developed a deeper understanding of the relationship between HTML, CSS, and JavaScript, and how they work together to create engaging user experiences. I'm really proud of my ability to not just code a website, but to design thoughtful interactions that truly serve the user's needs and wow them.
 
 
 ## References
@@ -70,3 +77,12 @@ I did not colleaborate with anyone.
 (https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event) - Used to understand how to handle window resize events for responsive design
 
 (https://www.w3schools.com/howto/howto_js_modal.asp) - Referenced for understanding modal functionality principles
+
+(https://chat.openai.com) -
+Assisted with debugging my interactivity JS file, specifically to teach me how to get my modal to stop popping up so soon
+
+(https://www.youtube.com/watch?v=POX3dT-pB4E) -
+Used to help me understand how to build the typewriter animation on the homepage, especially for timing out each character and looping with a pause after completion.
+
+(https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) -
+Used to help me implement scroll-based fade-in animations for sections using custom @keyframes paired with animation properties for a smooth coming in effect.
