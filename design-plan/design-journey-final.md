@@ -76,7 +76,7 @@ I did not colleaborate with anyone.
 
 (https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event) - Used to understand how to handle window resize events for responsive design
 
-(https://www.w3schools.com/howto/howto_js_modal.asp) - Referenced for understanding modal functionality principles
+(https://www.w3schools.com/howto/howto_css_modals.asp) - Referenced for understanding modal functionality principles
 
 (https://chat.openai.com) -
 Assisted with debugging my interactivity JS file, specifically to teach me how to get my modal to stop popping up so soon. Also used it to help me filter out redundancy in my CSS file and optimize it. All suggestions were understood and customized to fit the class guidelines and my original content.
