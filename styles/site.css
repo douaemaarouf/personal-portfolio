@@ -48,7 +48,6 @@ body {
     right: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
     border-radius: 14px;
     padding: 10px 20px;
     z-index: 1000;
@@ -845,8 +844,7 @@ body {
     height: 80px;
   }
 
-
-  /* hamburger menu styles */
+/* hamburger menu styles */
 .hamburger {
   display: block;
   background: none;
@@ -866,38 +864,31 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-/* style for when hamburger is active */
 .hamburger.active .hamburger-line:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
-
 .hamburger.active .hamburger-line:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.active .hamburger-line:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* for the final implementation you'll use these classes */
-#main-nav.hidden {
-  display: none;
-}
-
+/* hamburger toggle classes */
 #hamburger-btn.hidden {
-  display: none;
+  display: none !important;
 }
-
 #hamburger-btn.visible {
-  display: block;
+  display: block !important;
 }
-
-/* when menu is visible */
+#main-nav.hidden {
+  display: none !important;
+}
 #main-nav.show-nav {
-  display: block;
+  display: block !important;
 }
 
-/* modal styles */
+/* modal overlay */
 #modal-overlay {
   position: fixed;
   top: 0;
@@ -911,6 +902,7 @@ body {
   z-index: 1000;
 }
 
+/* modal content */
 .modal-content {
   background-color: white;
   width: 80%;
@@ -922,7 +914,19 @@ body {
   overflow-y: auto;
 }
 
-.close-btn {
+#modal-image-container {
+  margin-bottom: 20px;
+}
+#modal-image {
+  width: 100%;
+  height: auto;
+}
+#modal-text-content {
+  padding: 0 10px;
+}
+
+.close-btn,
+#close-menu {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -931,28 +935,60 @@ body {
   border: none;
   cursor: pointer;
 }
-
-.close-btn:hover {
+.close-btn:hover,
+#close-menu:hover {
   color: #555;
 }
 
-#modal-image-container {
-  margin-bottom: 20px;
-}
-
-#modal-image {
+/* modal menu */
+#menu-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu-modal.hidden {
+  display: none !important;
 }
 
-#modal-text-content {
-  padding: 0 10px;
+.menu-modal-content {
+  background-color: white;
+  width: 85%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 12px;
+  position: relative;
 }
 
-.hidden {
-  display: none;
+.menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+.menu-links li {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.menu-links a {
+  text-decoration: none;
+  color: #1d1d1f;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 0;
+  display: block;
+  transition: color 0.2s ease;
+}
+.menu-links a:hover {
+  color: #0066cc;
 }
 
+/* project thumbnails */
 .project-thumbnail {
   background: none;
   border: none;
@@ -961,16 +997,199 @@ body {
   width: 100%;
   text-align: left;
 }
-
 .project-thumbnail:hover {
   opacity: 0.9;
 }
 
-/* prevent scrolling when modal is open */
+/* utility classes */
+.hidden {
+  display: none !important;
+}
 .no-scroll {
   overflow: hidden;
 }
 
-.hidden {
-  display: none;
+/* hover effects */
+.case-study {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.case-study:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+nav a:hover {
+  background-color: rgba(0, 102, 204, 0.1);
+  color: #0066cc;
+}
+
+.gallery-item,
+.link-item,
+.writing-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover,
+.link-item:hover,
+.writing-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* button hover */
+.button-link:hover,
+.link-button:hover {
+  background-color: #005bb5;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+  transition: background-color 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card,
+.hero-content,
+.gallery-item,
+.case-study,
+.link-item,
+.writing-item {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  animation-delay: 0.1s;
+  will-change: transform, opacity;
+}
+
+/* responsiveness for mobile */
+@media (max-width: 767px) {
+  #main-nav:not(.show-nav) {
+    display: none !important;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    margin: 100px 0 40px;
+  }
+
+  .hero-image-wrapper {
+    margin-top: 20px;
+  }
+
+  .hero-image {
+    width: 220px;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  #hamburger-btn {
+    display: block;
+  }
+
+  #main-nav {
+    display: none;
+  }
+
+  .card {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .project-grid,
+  .skills-grid,
+  .books-grid,
+  .case-studies-grid,
+  .links-grid,
+  .writing-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery {
+    flex-direction: column;
+  }
+
+  .gallery-item {
+    max-width: 100%;
+  }
+
+  .photography-content,
+  .camera-content,
+  .learning-columns {
+    flex-direction: column;
+  }
+
+  .contact .hero-image {
+    width: 180px;
+  }
+
+  .book-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-cover {
+    margin-bottom: 16px;
+  }
+}
+
+/* responsive desktop */
+@media (min-width: 768px) {
+  #hamburger-btn {
+    display: none !important;
+  }
+
+  #main-nav {
+    display: block !important;
+  }
+
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    padding: 0 40px;
+  }
+
+  .card {
+    margin: 30px auto;
+  }
+
+  .project-grid,
+  .skills-grid,
+  .books-grid,
+  .case-studies-grid,
+  .links-grid,
+  .writing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .gallery {
+    flex-direction: row;
+  }
+
+  .photography-content,
+  .camera-content,
+  .learning-columns {
+    flex-direction: row;
+  }
 }

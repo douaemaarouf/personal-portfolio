@@ -12,31 +12,43 @@
 <body class="contact">
     <header>
         <div class="header-container">
-            <div class="logo-container">
-                <!-- Source: (original work) Douae Maarouf -->
-                <img
-                    src="images/dm-logo.png"
-                    alt="DM Logo"
-                    class="logo"
-                >
-            </div>
+          <div class="logo-container">
+            <!-- Source: (original work) Douae Maarouf -->
+            <a href="index.html">
+                <img src="images/dm-logo.png" alt="DM Logo" class="logo"/>
+            </a>
+          </div>
 
-            <button id="hamburger-btn" class="hamburger">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+          <button id="hamburger-btn" class="hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-me.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="interests.html">Personal Interests</a></li>
-                <li><a href="contact.html">Ways to Find Me</a></li>
-            </ul>
+
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-me.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="interests.html">Personal Interests</a></li>
+            <li><a href="contact.html">Ways to Find Me</a></li>
+          </ul>
         </nav>
-    </header>
+
+        <div id="menu-modal" class="hidden">
+          <div class="menu-modal-content">
+            <button id="close-menu" class="close-btn">×</button>
+            <ul class="menu-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-me.html">About Me</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="interests.html">Personal Interests</a></li>
+              <li><a href="contact.html">Ways to Find Me</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
 
     <main>
         <section class="hero contact-hero">
@@ -145,5 +157,9 @@
 
         <p>Contact me at <a href="mailto:dm927@cornell.edu">dm927@cornell.edu</a></p>
     </footer>
+
+    <script src="scripts/jquery-3.7.1.js"></script>
+    <script src="scripts/interactivity.js"></script>
+
 </body>
 </html>

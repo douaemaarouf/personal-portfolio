@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Douae Maarouf's Portfolio Website</title>
-    <link rel="stylesheet" href="styles/site.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Douae Maarouf's Portfolio Website</title>
+  <link rel="stylesheet" href="styles/site.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header>
-       <div class="header-container">
-            <div class="logo-container">
-                <!-- Source: (original work) Douae Maarouf -->
-                <img
-                    src="images/dm-logo.png"
-                    alt="DM Logo"
-                    class="logo"
-                >
-            </div>
-
-            <button id="hamburger-btn" class="hamburger">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-me.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="interests.html">Personal Interests</a></li>
-                <li><a href="contact.html">Ways to Find Me</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero index-hero">
-            <div class="hero-content">
-                <!-- Source: (original work) Douae Maarouf -->
-                <h1>Hey hey, I'm Douae. 👋</h1>
-                <p class="hero-subtitle">
-                    A sophomore at Cornell University, learning all I can about Information Science and Communication because I'm <strong>driven</strong> by the ways technology shapes our stories and interactions.
-                </p>
-                <p class="hero-previously">Previously at NBCUniversal, eCornell, Citi, Millenium, Sarah's Kitchen, The Cornell Daily Sun</p>
-            </div>
-            <div class="hero-image-wrapper">
-                <!-- Source: (original work) Douae Maarouf -->
-                <img
-                    src="images/maarouf_douae_headshot.jpg"
-                    alt="Douae Maarouf Headshot"
-                    class="hero-image"
-                >
-            </div>
-        </section>
-    </main>
-    <footer>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
         <!-- Source: (original work) Douae Maarouf -->
-        <div class="star-decor">
-            <img
-                src="images/star-decor.png" alt="Star Decor"
-            >
-        </div>
+        <a href="index.html">
+          <img src="images/dm-logo.png" alt="DM Logo" class="logo"/>
+        </a>
+      </div>
 
-        <p>Contact me at <a href="mailto:dm927@cornell.edu">dm927@cornell.edu</a></p>
-    </footer>
+      <button id="hamburger-btn" class="hamburger">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-me.html">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="interests.html">Personal Interests</a></li>
+        <li><a href="contact.html">Ways to Find Me</a></li>
+      </ul>
+    </nav>
+
+    <div id="menu-modal" class="hidden">
+      <div class="menu-modal-content">
+        <button id="close-menu" class="close-btn">×</button>
+        <ul class="menu-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-me.html">About Me</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="interests.html">Personal Interests</a></li>
+          <li><a href="contact.html">Ways to Find Me</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero index-hero">
+      <div class="hero-content">
+        <!-- Source: (original work) Douae Maarouf -->
+        <h1>Hey hey, I'm Douae. 👋</h1>
+        <p class="hero-subtitle">
+          A sophomore at Cornell University, learning all I can about Information Science and Communication because I'm <strong>driven</strong> by the ways technology shapes our stories and interactions.
+        </p>
+        <p class="hero-previously">Previously at NBCUniversal, eCornell, Citi, Millenium, Sarah's Kitchen, The Cornell Daily Sun</p>
+      </div>
+      <div class="hero-image-wrapper">
+        <!-- Source: (original work) Douae Maarouf -->
+        <img src="images/maarouf_douae_headshot.jpg" alt="Douae Maarouf Headshot" class="hero-image"/>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Source: (original work) Douae Maarouf -->
+    <div class="star-decor">
+      <img src="images/star-decor.png" alt="Star Decor"/>
+    </div>
+    <p>Contact me at <a href="mailto:dm927@cornell.edu">dm927@cornell.edu</a></p>
+  </footer>
+
+  <script src="scripts/jquery-3.7.1.js"></script>
+  <script src="scripts/interactivity.js"></script>
 </body>
 </html>
