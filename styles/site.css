@@ -1,3 +1,11 @@
+:root {
+  --studio: #E3DFDC;
+  --bliss: #DFCBBF;
+  --desert: #C9AC99;
+  --rain-storm: #7F8F8E;
+  --shadow: #263D41;
+}
+
 body {
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: #f5f5f7;
@@ -39,6 +47,31 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     padding: 30px;
     margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--desert), var(--rain-storm), var(--shadow));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+  .card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: var(--rain-storm);
   }
 
   /* nav */
@@ -110,17 +143,31 @@ body {
   }
 
   footer a {
-    color: #0066cc;
+    color: var(--shadow);
   }
 
   /* hero sections */
-  .hero {
+  .home .hero {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     max-width: 1100px;
-    margin: 140px auto 60px;
+    margin: 50px auto -70px;
+    gap: 60px;
+    padding: 0 20px;
+  }
+
+  .about .hero,
+  .portfolio .hero,
+  .interests .hero,
+  .contact .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 50px auto 20px;
     gap: 60px;
     padding: 0 20px;
   }
@@ -214,8 +261,8 @@ body {
   }
 
   .about-intro aside {
-    background-color: rgba(0, 102, 204, 0.05);
-    border-left: 4px solid #0066cc;
+    background-color: #7b919023;
+    border-left: 4px solid #2b5860;
     border-radius: 0 8px 8px 0;
     padding: 16px 20px;
     margin: 20px 0;
@@ -330,12 +377,41 @@ body {
   }
 
   .skill-pill {
-    background-color: rgba(0, 102, 204, 0.1);
-    color: #0066cc;
     padding: 8px 16px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 500;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+  }
+
+  /* Different pill colors */
+  .skill-pill:nth-child(5n+1) {
+    background-color: var(--bliss);
+    color: var(--shadow);
+  }
+
+  .skill-pill:nth-child(5n+2) {
+    background-color: var(--desert);
+    color: var(--shadow);
+  }
+
+  .skill-pill:nth-child(5n+3) {
+    background-color: var(--rain-storm);
+    color: white;
+  }
+
+  .skill-pill:nth-child(5n+4) {
+    background-color: var(--studio);
+    color: var(--shadow);
+  }
+
+  .skill-pill:nth-child(5n+5) {
+    background-color: var(--shadow);
+    color: white;
+  }
+
+  .skill-pill:hover {
+    transform: translateY(-2px);
   }
 
   /* interests page - bucket list */
@@ -671,14 +747,23 @@ body {
   }
 
   .tag {
-    display: inline-block;
-    background-color: rgba(0, 102, 204, 0.1);
-    color: #0066cc;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-bottom: 16px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+  /* Rotate tag colors */
+  .tag:nth-child(odd) {
+    background-color: var(--bliss);
+    color: var(--shadow);
+  }
+
+  .tag:nth-child(even) {
+    background-color: var(--rain-storm);
+    color: white;
   }
 
   .case-study p {
@@ -1021,16 +1106,17 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .case-study:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(127, 143, 142, 0.1);
+  border-left: 3px solid var(--desert);
 }
 
 nav a {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 nav a:hover {
-  background-color: rgba(0, 102, 204, 0.1);
-  color: #0066cc;
+  background-color: var(--rain-storm);
+  color: white;
 }
 
 .gallery-item,
@@ -1041,8 +1127,8 @@ nav a:hover {
 .gallery-item:hover,
 .link-item:hover,
 .writing-item:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(127, 143, 142, 0.15);
 }
 
 /* button hover */
@@ -1238,4 +1324,87 @@ nav a:hover {
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+/* Link hovers */
+a:hover {
+  color: var(--rain-storm);
+  transition: color 0.2s ease;
+}
+
+/* Navigation hover (modify existing) */
+nav a:hover {
+  background-color: var(--rain-storm);
+  color: white;
+}
+
+/* Case study links */
+.case-study-link:hover {
+  color: var(--shadow);
+}
+
+/* Button link hover */
+.button-link:hover {
+  background-color: var(--rain-storm);
+}
+
+/* Footer link hover */
+footer a:hover {
+  color: var(--desert);
+}
+
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin:-5px 0 -5px 0;
+}
+
+.social-links a {
+  color: var(--rain-storm);
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.social-links a:hover {
+  color: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+}
+
+
+.leadership card .experience-item {
+  display: inline-block;
+  width: calc(50% - 15px);
+  margin-right: 30px;
+  vertical-align: top;
+}
+
+.leadership card .experience-item:nth-child(2n) {
+  margin-right: 0;
+}
+
+/* For mobile, stack them */
+@media (max-width: 768px) {
+  .leadership card .experience-item {
+    width: 100%;
+    margin-right: 0;
+    display: block;
+  }
+}
+
+.leadership {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.leadership h2 {
+  grid-column: 1 / -1; /* Make the h2 span full width */
 }
