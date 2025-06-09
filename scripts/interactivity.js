@@ -58,8 +58,8 @@ $(document).ready(function () {
         setTimeout(() => {
           element.textContent = "";
           index = 0;
-          setTimeout(type, restartDelay);
-      }, endPause);
+          setTimeout(type, 500);
+      }, delay);
       }
     }
 
