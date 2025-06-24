@@ -13,7 +13,6 @@
     <header>
         <div class="header-container">
           <div class="logo-container">
-            <!-- Source: (original work) Douae Maarouf -->
             <a href="index.html">
                 <img src="images/dm-logo.png" alt="DM Logo" class="logo"/>
             </a>
@@ -29,10 +28,25 @@
         <nav id="main-nav">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about-me.html">About Me</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="interests.html">Personal Interests</a></li>
-            <li><a href="contact.html">Ways to Find Me</a></li>
+            <li class="dropdown">
+              <a href="index.html#work" class="dropdown-toggle">Work ▾</a>
+              <div class="dropdown-menu">
+                <a href="index.html#featured-work" class="dropdown-item">
+                  <div class="dropdown-title">Case Studies</div>
+                  <div class="dropdown-desc">Marketing & UX Projects</div>
+                </a>
+                <a href="index.html#resume-section" class="dropdown-item">
+                  <div class="dropdown-title">Resume</div>
+                  <div class="dropdown-desc">Experience & Skills</div>
+                </a>
+                <a href="https://www.maaroufgallery.com" target="_blank" class="dropdown-item">
+                  <div class="dropdown-title">Photography</div>
+                  <div class="dropdown-desc">Visual Portfolio</div>
+                </a>
+              </div>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </nav>
 
@@ -41,26 +55,26 @@
             <button id="close-menu" class="close-btn">×</button>
             <ul class="menu-links">
               <li><a href="index.html">Home</a></li>
-              <li><a href="about-me.html">About Me</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="interests.html">Personal Interests</a></li>
-              <li><a href="contact.html">Ways to Find Me</a></li>
+              <li><a href="index.html#featured-work">Case Studies</a></li>
+              <li><a href="index.html#resume-section">Resume</a></li>
+              <li><a href="https://www.maaroufgallery.com" target="_blank">Photography</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
             </ul>
           </div>
         </div>
-      </header>
+    </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero about-hero">
             <div class="hero-content">
-                <!-- Source: (original work) Douae Maarouf -->
                 <h1>Marketing. Brand Strategy. User Experience.🚀</h1>
                 <p class="hero-subtitle">
                     I'm redefining what it looks like to tell stories in our digital world. And I'm really <em>damn good</em> at it.
                 </p>
             </div>
             <div class="hero-image-wrapper">
-                <!-- Source: (original work) Douae Maarouf -->
                 <img
                     src="images/conference.jpg"
                     alt="Group of Students at USC Conference"
@@ -69,149 +83,259 @@
             </div>
         </section>
 
-        <section class="about-intro card">
-            <!-- Source: (original work) Douae Maarouf -->
-            <h2>My Story</h2>
-            <p>👋 Hi, I'm Douae—a sophomore at Cornell University studying Information Science and Communication. Why? Because I'm endlessly curious about how technology shapes human behavior, and how we can unlock the holy grail of storytelling that actually sticks.</p>
+        <!-- Dynamic About Layout -->
+        <section class="about-snapshot-main">
+            <div class="about-grid">
+                <!-- Main Story -->
+                <div class="story-card">
+                    <h2>My Story</h2>
+                    <p>👋 I'm Douae—a sophomore at Cornell studying the intersection of <strong>technology and human behavior</strong>. I'm obsessed with creating digital experiences that actually connect with people.</p>
+                    <p>💡 Whether I'm building email campaigns for thousands of students or analyzing market sentiment, I'm always asking: <em>How do we tell stories that stick in our digital world?</em></p>
+                </div>
 
-            <p>💡 I'm all about finding the sweet spot where brand strategy, communication technologies, and human interaction come together. Whether it's geeking out over marketing trends, analyzing fascinating data patterns, or designing unforgettable user experiences, I'm on a mission to craft digital experiences that are as functional as they are fun to use.</p>
+                <!-- Current Focus -->
+                <div class="current-card">
+                    <h3>Currently</h3>
+                    <div class="current-items">
+                        <div class="current-item">
+                            <span class="role-dot nbcuniversal"></span>
+                            <div>
+                                <strong>NBCUniversal</strong>
+                                <span>Audience Development</span>
+                            </div>
+                        </div>
+                        <div class="current-item">
+                            <span class="role-dot ecornell"></span>
+                            <div>
+                                <strong>eCornell</strong>
+                                <span>Product Marketing</span>
+                            </div>
+                        </div>
+                        <div class="current-item">
+                            <span class="role-dot millennium"></span>
+                            <div>
+                                <strong>Millennium</strong>
+                                <span>Market Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <p>🌱 But here's the thing: none of this works without people. Community is everything to me. Whether I'm collaborating with a team, making products more accessible, or amplifying someone else's voice, I'm driven by the idea that every brand, every design, every campaign should create meaningful connections. Because at the end of the day, that's what it's all about: building raw, authentic, and deeply human connections in an increasingly tech-driven world.</p>
+                <!-- Skills Snapshot -->
+                <div class="skills-visual">
+                    <h3>What I Do</h3>
+                    <div class="skill-bubbles">
+                        <span class="skill-bubble primary">Email Marketing</span>
+                        <span class="skill-bubble secondary">UX Research</span>
+                        <span class="skill-bubble accent">Data Analysis</span>
+                        <span class="skill-bubble primary">Brand Strategy</span>
+                        <span class="skill-bubble secondary">A/B Testing</span>
+                        <span class="skill-bubble accent">Community Building</span>
+                    </div>
+                </div>
 
-            <p>🫧 When I'm not dreaming up creative strategies, you can find me hiking scenic trails, learning from locals in other countries, or losing track of time reading psych thrillers with my cat purring in my lap. Oh, and I have a thing for photography too 👀</p>
+                <!-- Achievements -->
+                <div class="achievements-card">
+                    <h3>Impact</h3>
+                    <div class="achievement-stats">
+                        <div class="stat">
+                            <span class="stat-number">70%</span>
+                            <span class="stat-label">Email Open Rate</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2K+</span>
+                            <span class="stat-label">Students Reached</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Industries</span>
+                        </div>
+                    </div>
+                </div>
 
-            <aside>
-                <p>Fun fact: I started taking travel photography more seriously after spending a weekend camping in the Sahara Desert. BEST EXPERIENCE EVER!!</p>
-            </aside>
-        </section>
+                <!-- Personal Touch -->
+                <div class="personality-card">
+                    <h3>Beyond Work</h3>
+                    <div class="personality-items">
+                        <div class="personality-item">
+                            <span class="emoji">🌍</span>
+                            <span>Sahara camping enthusiast</span>
+                        </div>
+                        <div class="personality-item">
+                            <span class="emoji">📸</span>
+                            <span>Travel photographer</span>
+                        </div>
+                        <div class="personality-item">
+                            <span class="emoji">🤝</span>
+                            <span>Community builder</span>
+                        </div>
+                        <div class="personality-item">
+                            <span class="emoji">🇲🇦</span>
+                            <span>Proud Moroccan</span>
+                        </div>
+                    </div>
+                </div>
 
-        <section class="education card">
-            <!-- Source: (original work) Douae Maarouf -->
-            <h2>Education</h2>
-            <div class="experience-item">
-                <h3>Cornell University</h3>
-                <p class="position"><strong>B.S. in Communication & Information Science (UX Concentration)</strong> | Minor in Arabic</p>
-                <p class="duration"><em>Expected: May 2027</em> | Ithaca, New York</p>
-                <div class="education-details">
-                    <p>At Cornell, I'm exploring the intersection of technology and human interaction, focusing on how digital tools shape our communication patterns and learning experiences.</p>
+                <!-- Education -->
+                <div class="education-card">
+                    <h3>Cornell University</h3>
+                    <p><strong>B.S. Communication & Information Science</strong></p>
+                    <p>Minor in Arabic • Expected 2027</p>
+                    <div class="cornell-badge">🔴</div>
                 </div>
             </div>
         </section>
 
+<!-- Enhanced iPhone Gallery HTML with Scroll Indicator -->
 
-    <section class="work-experience card">
-    <h2>Work Experience</h2>
+<section class="phone-gallery scroll-reveal">
+<section class="phone-gallery dark-theme scroll-reveal">
+  <h2>A snapshot into my world ✧･ﾟ: *</h2>
 
-    <div class="experience-item">
-        <h3>Audience Development Intern | NBCUniversal</h3>
-        <p class="duration"><em>June 2025 - August 2025 | New York City</em></p>
-        <p>This summer, I'll be diving into MarTech and audience acquisition strategies at scale. I'm excited to learn how media companies think about reaching and engaging millions of viewers.</p>
-    </div>
+  <!-- NEW: Scroll indicator under title -->
+  <div class="scroll-indicator">
+    <span class="scroll-text">scroll to see more</span>
+  </div>
 
-    <div class="experience-item">
-        <h3>Product Marketer | eCornell</h3>
-        <p class="duration"><em>December 2024 - Present | Remote</em></p>
-        <p>Streamlining how we manage thousands of student story submissions across hundreds of courses to track student engagement patterns, then translating those insights into actionable content strategies. Currently leading a comprehensive blog refresh, redesigning user flows and improving search architecture.</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>B2B Marketing Associate | MCCI Corporation</h3>
-        <p class="duration"><em>June 2024 - August 2024 | New York</em></p>
-        <p>Built the company's first automated email marketing system from scratch, implementing customer segmentation and A/B testing practices. I also wrote technical content about IoT hardware specifications, LoRaWAN networking protocols, and USB technologies. The key was approaching each piece of hardware like a story—understanding the engineering challenges so I could communicate the value proposition to both technical and non-technical decision makers.</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>Co-Founder | Sarah's Sweet Kitchen</h3>
-        <p class="duration"><em>May 2020 - July 2023 | New York</em></p>
-        <p>What started as a passion project became a real business. I taught myself product photography principles, learned about food styling, and studied recipe development to build a food blog website that drove organic discovery. We partnered with companies like Land O'Lakes and LorAnn Oils and were featured in major food publications like theFeedFeed. This experience taught me how to wear multiple hats—from product photography and SEO to email marketing and social media strategy.</p>
-    </div>
-    </section>
-
-    <section class="leadership card">
-    <h2>Current Projects & Leadership</h2>
-
-    <div class="experience-item">
-        <h3>Financial Market Analysis Researcher | Millennium</h3>
-        <p class="duration"><em>November 2024 - Present | New York</em></p>
-        <p>Built end-to-end sentiment analysis pipelines using NLP models on social media data and trained machine learning models to forecast stock prices. In a nutshell: conducted behavioral marketing research but for financial markets—understanding how human emotions and social signals influence decision-making. Learning quantitative finance methodologies has sharpened my approach to marketing attribution and customer lifetime value modeling (the perfect intersection of data science and human psychology!).</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>Co-President | Women in Computing at Cornell</h3>
-        <p class="duration"><em>October 2024 - Present | Ithaca, New York</em></p>
-        <p>Leading an incredible team to create opportunities for women and gender minorities in tech. We host panels, build mentorship programs, and create spaces where underrepresented voices can thrive. It's been amazing to see our community grow and watch people find their confidence in this industry.</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>Director of Marketing Operations | Muslim Educational & Cultural Association</h3>
-        <p class="duration"><em>September 2023 - Present | Ithaca, New York</em></p>
-        <p>Growing our campus community through strategic social media campaigns and engagement initiatives. I love building connections and helping people find their place within our organization—community building is honestly one of my favorite parts of any role.</p>
-    </div>
-
-    <div class="experience-item">
-        <h3>News Reporter & Photojournalist | The Cornell Daily Sun</h3>
-        <p class="duration"><em>September 2023 - May 2024 | Ithaca, New York</em></p>
-        <p>Served as both a writer and photographer, conducting interviews and producing journalistic content on key campus events, including a cover-page feature on a high-impact, sensitive topic. This role taught me how to distill complex information into compelling narratives—a skill that translates perfectly to marketing storytelling.</p>
-    </div>
-    </section>
-
-    <section class="upcoming card">
-    <aside>
-        <p><strong>Here's what I've learned:</strong> Whether I'm analyzing financial markets, optimizing educational platforms, or building IoT marketing campaigns, the core challenge is always the same—understanding how people think, what they need, and how to reach them effectively. I'm a marketer who happens to work across industries, not the other way around.</p>
-
-        <p><strong>Want the full technical details?</strong> Email me at <a href="mailto:dm927@cornell.edu">dm927@cornell.edu</a> for my complete resume.</p>
-    </aside>
-    </section>
-
-        <section class="skills card">
-            <!-- Source: (original work) Douae Maarouf -->
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3> Tools & Programs</h3>
-                    <div class="skills-pills">
-                        <span class="skill-pill">Shopify</span>
-                        <span class="skill-pill">Mailchimp</span>
-                        <span class="skill-pill">Flowdesk</span>
-                        <span class="skill-pill">Adobe Suite</span>
-                        <span class="skill-pill">WordPress</span>
-                        <span class="skill-pill">Canva</span>
-                        <span class="skill-pill">MS Office</span>
-                        <span class="skill-pill">Figma</span>
-                        <span class="skill-pill">Google Analytics</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Technical Skills</h3>
-                    <div class="skills-pills">
-                        <span class="skill-pill">Short/Long Form Copywriting</span>
-                        <span class="skill-pill">B2B Marketing</span>
-                        <span class="skill-pill">Email Marketing</span>
-                        <span class="skill-pill">Partnership Marketing</span>
-                        <span class="skill-pill">Content Creation</span>
-                        <span class="skill-pill">A/B Testing</span>
-                        <span class="skill-pill">Customer Segmentation</span>
-                        <span class="skill-pill">HTML</span>
-                        <span class="skill-pill">CSS</span>
-                        <span class="skill-pill">UX Research</span>
-                    </div>
-                </div>
+  <div class="phone-mockup-container">
+    <div class="phone-mockup">
+      <div class="phone-frame">
+        <div class="phone-notch">
+          <div class="dynamic-island">
+            <div class="island-content">
+              <div class="camera-dot"></div>
+              <div class="speaker-slit"></div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <!-- Source: (original work) Douae Maarouf -->
-        <div class="star-decor">
-            <img
-                src="images/star-decor.png" alt="Star Decor"
-            >
+          </div>
         </div>
 
-        <p>Contact me at <a href="mailto:dm927@cornell.edu">dm927@cornell.edu</a></p>
-    </footer>
+        <div class="phone-screen">
+          <div class="status-bar">
+            <div class="status-left">
+              <span class="time">9:41</span>
+            </div>
+            <div class="status-right">
+              <div class="battery-icon">
+                <div class="battery-fill"></div>
+              </div>
+              <div class="signal-bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
 
-    <script src="scripts/jquery-3.7.1.js"></script>
-    <script src="scripts/interactivity.js"></script>
+          <div class="photo-grid-phone">
+            <div class="photo-item large">
+              <img src="images/conference.jpg" alt="Conference moment with friends">
+            </div>
+            <div class="photo-item">
+              <img src="images/lemon-cake.jpeg" alt="Food photography">
+            </div>
+            <div class="photo-item">
+              <img src="images/saharan-nomad.JPG" alt="Morocco travel">
+            </div>
+            <div class="photo-item tall">
+              <img src="images/fun-photo-me.png" alt="Personal moments">
+            </div>
+            <div class="photo-item wide">
+              <img src="images/eid-banquet.jpeg" alt="Community events">
+            </div>
+            <div class="photo-item">
+              <img src="images/larache-waters.JPG" alt="Travel photography">
+            </div>
+            <div class="photo-item">
+              <img src="images/tangier-streets.JPG" alt="Street photography">
+            </div>
+            <div class="photo-item">
+              <img src="images/moroccan-door.jpeg" alt="Architecture">
+            </div>
+            <div class="photo-item">
+              <img src="images/palm-trees.png" alt="Nature">
+            </div>
+            <div class="photo-item">
+              <img src="images/conference.jpg" alt="Professional events">
+            </div>
+            <div class="photo-item">
+              <img src="images/saharan-nomad.JPG" alt="Adventures">
+            </div>
+            <div class="photo-item">
+              <img src="images/moroccan-door.jpeg" alt="Cultural moments">
+            </div>
+            <div class="photo-item">
+              <img src="images/lemon-cake.jpeg" alt="More food">
+            </div>
+            <div class="photo-item">
+              <img src="images/larache-waters.JPG" alt="More travel">
+            </div>
+            <div class="photo-item">
+              <img src="images/tangier-streets.JPG" alt="More streets">
+            </div>
+            <div class="photo-item">
+              <img src="images/palm-trees.png" alt="More nature">
+            </div>
+            <div class="photo-item">
+              <img src="images/fun-photo-me.png" alt="More personal">
+            </div>
+            <div class="photo-item">
+              <img src="images/eid-banquet.jpeg" alt="More events">
+            </div>
+            <div class="photo-item">
+              <img src="images/conference.jpg" alt="Extra 1">
+            </div>
+            <div class="photo-item">
+              <img src="images/saharan-nomad.JPG" alt="Extra 2">
+            </div>
+            <div class="photo-item">
+              <img src="images/moroccan-door.jpeg" alt="Extra 3">
+            </div>
+            <div class="photo-item">
+              <img src="images/lemon-cake.jpeg" alt="Extra 4">
+            </div>
+            <div class="photo-item">
+              <img src="images/larache-waters.JPG" alt="Extra 5">
+            </div>
+            <div class="photo-item">
+              <img src="images/tangier-streets.JPG" alt="Extra 6">
+            </div>
+          </div>
 
-</body>
-</html>
+          <div class="home-indicator"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+<div class="dark-integrated"></div>
+
+<footer class="dark-footer">
+  <div class="star-decor">
+    <img src="images/star-decor.png" alt="Star Decor" loading="lazy"/>
+  </div>
+
+  <div class="social-links">
+    <!-- Your existing social links stay the same -->
+    <a href="https://www.linkedin.com/in/douae-m" target="_blank" aria-label="LinkedIn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+    </a>
+
+    <a href="https://www.github.com/douaemaarouf" target="_blank" aria-label="GitHub">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+      </svg>
+    </a>
+
+    <a href="https://medium.com/@douaemaarouff" target="_blank" aria-label="Medium">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+      </svg>
+    </a>
+  </div>
+
+  <p>Contact me at <a href="mailto:dm927@cornell.edu">dm927@cornell.edu</a></p>
+</footer>

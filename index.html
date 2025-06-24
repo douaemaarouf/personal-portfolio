@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Preload critical images -->
+  <link rel="preload" as="image" href="images/maarouf_douae_headshot.jpg">
 </head>
 <body class="home">
   <header>
@@ -26,43 +29,256 @@
       </button>
     </div>
 
+    <!-- Streamlined Navigation - Only 3 main pages -->
     <nav id="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about-me.html">About Me</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="interests.html">Personal Interests</a></li>
-        <li><a href="contact.html">Ways to Find Me</a></li>
+        <li class="dropdown">
+          <a href="#work" class="dropdown-toggle">Work ▾</a>
+          <div class="dropdown-menu">
+            <a href="#featured-work" class="dropdown-item">
+              <div class="dropdown-title">Case Studies</div>
+              <div class="dropdown-desc">Marketing & UX Projects</div>
+            </a>
+            <a href="#resume-section" class="dropdown-item">
+              <div class="dropdown-title">Resume</div>
+              <div class="dropdown-desc">Experience & Skills</div>
+            </a>
+            <a href="https://www.maaroufgallery.com" target="_blank" class="dropdown-item">
+              <div class="dropdown-title">Photography</div>
+              <div class="dropdown-desc">Visual Portfolio</div>
+            </a>
+          </div>
+        </li>
+        <li><a href="about-me.html">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
+    <!-- Mobile Menu -->
     <div id="menu-modal" class="hidden">
       <div class="menu-modal-content">
         <button id="close-menu" class="close-btn">×</button>
         <ul class="menu-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about-me.html">About Me</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="interests.html">Personal Interests</a></li>
-          <li><a href="contact.html">Ways to Find Me</a></li>
+          <li>
+            <span class="menu-section-label">Work</span>
+            <a href="#featured-work">Case Studies</a>
+            <a href="#resume-section">Resume</a>
+            <a href="https://www.maaroufgallery.com" target="_blank">Photography</a>
+          </li>
+          <li><a href="about-me.html">About</a></li>
         </ul>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero index-hero">
+    <!-- Hero Section -->
+    <section class="hero index-hero scroll-reveal">
       <div class="hero-content">
         <!-- Source: (original work) Douae Maarouf -->
         <h1><span id="typewriter-text"></span><span class="cursor">|</span></h1>
         <p class="hero-subtitle">
           A sophomore at Cornell University, learning all I can about Information Science and Communication because I'm <strong>driven</strong> by the ways technology shapes our stories and interactions.
         </p>
-        <p class="hero-previously">Previously at NBCUniversal, eCornell, Citi, Millenium, Sarah's Kitchen, The Cornell Daily Sun</p>
+        <p class="hero-previously">Previously at NBCUniversal, eCornell, Citi, Millennium, Sarah's Kitchen, The Cornell Daily Sun</p>
       </div>
       <div class="hero-image-wrapper">
         <!-- Source: (original work) Douae Maarouf -->
-        <img src="images/maarouf_douae_headshot.jpg" alt="Douae Maarouf Headshot" class="hero-image"/>
+        <img src="images/maarouf_douae_headshot.jpg" alt="Douae Maarouf Headshot" class="hero-image" loading="eager" fetchpriority="high"/>
+      </div>
+    </section>
+
+    <!-- Scroll Arrow -->
+    <div class="scroll-arrow">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <!-- Featured Work Section -->
+    <div id="featured-work"></div>
+<!-- REPLACE YOUR SHOWCASE GRID SECTION WITH THIS -->
+
+<section class="case-studies-showcase scroll-reveal">
+  <h2>Featured Work</h2>
+  <div class="showcase-grid">
+
+    <div class="showcase-item large" data-case="email-marketing">
+      <div class="showcase-content">
+        <span class="showcase-tag">B2B Marketing</span>
+        <h3>Automated Email Campaigns</h3>
+        <p>Built lead-nurture flows with advanced segmentation</p>
+        <div class="showcase-arrow">→</div>
+      </div>
+      <div class="showcase-bg"></div>
+    </div>
+
+    <div class="showcase-item medium" data-case="branding">
+      <div class="showcase-content">
+        <span class="showcase-tag">Brand Strategy</span>
+        <h3>Big Red Buzz Series</h3>
+        <p>Video content strategy for Cornell</p>
+        <div class="showcase-arrow">→</div>
+      </div>
+      <div class="showcase-bg"></div>
+    </div>
+
+    <div class="showcase-item medium" data-case="ux-design">
+      <div class="showcase-content">
+        <span class="showcase-tag">UX Design</span>
+        <h3>Mobile App Interface</h3>
+        <p>User-centered design for accessibility</p>
+        <div class="showcase-arrow">→</div>
+      </div>
+      <div class="showcase-bg"></div>
+    </div>
+
+    <!-- NEW: Vertical card to fill the empty space -->
+    <div class="showcase-item vertical" data-case="community-building">
+      <div class="showcase-content">
+        <span class="showcase-tag">Leadership</span>
+        <h3>Community Building</h3>
+        <p>Growing Women in Computing to 2,000+ members</p>
+        <div class="showcase-arrow">→</div>
+      </div>
+      <div class="showcase-bg"></div>
+    </div>
+
+    <div class="showcase-item small" data-case="photography">
+      <div class="showcase-content">
+        <span class="showcase-tag">Photography</span>
+        <h3>Travel Series</h3>
+        <p>Morocco adventures</p>
+        <div class="showcase-arrow">→</div>
+      </div>
+      <div class="showcase-bg"></div>
+    </div>
+
+    <div class="showcase-item medium" data-case="data-analysis">
+      <div class="showcase-content">
+        <span class="showcase-tag">Data Science</span>
+        <h3>Market Sentiment</h3>
+        <p>Financial forecasting models</p>
+        <div class="showcase-arrow">→</div>
+      </div>
+      <div class="showcase-bg"></div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Company Logos -->
+    <section class="logos-section scroll-reveal">
+      <p class="previously-text">Previously</p>
+      <div class="logos-container">
+        <a href="https://www.nbcnews.com" target="_blank" rel="noopener">
+          <img src="images/logos/nbcnews-logo.png" alt="NBC News" class="company-logo" loading="lazy">
+        </a>
+        <a href="https://www.today.com" target="_blank" rel="noopener">
+          <img src="images/logos/today-logo.svg" alt="Today Show" class="company-logo" loading="lazy">
+        </a>
+        <a href="https://www.ecornell.com" target="_blank" rel="noopener">
+          <img src="images/logos/ecornell-logo.png" alt="eCornell" class="company-logo" loading="lazy">
+        </a>
+        <a href="https://www.mlp.com" target="_blank" rel="noopener">
+          <img src="images/logos/millenium-logo.png" alt="Millennium" class="company-logo" loading="lazy">
+        </a>
+        <a href="https://www.citigroup.com" target="_blank" rel="noopener">
+          <img src="images/logos/citibank-Logo.png" alt="Citi" class="company-logo" loading="lazy">
+        </a>
+        <a href="https://www.mcci.com" target="_blank" rel="noopener">
+          <img src="images/logos/MCCI_Logo.png" alt="MCCI" class="company-logo" loading="lazy">
+        </a>
+        <a href="https://cornellsun.com" target="_blank" rel="noopener">
+          <img src="images/logos/cornell-sun-logo.jpg" alt="The Cornell Daily Sun" class="company-logo" loading="lazy">
+        </a>
+        <a href="https://www.sarahssweetkitchen.com" target="_blank" rel="noopener">
+          <img src="images/logos/sarahskitchen-logo.jpg" alt="Sarah's Kitchen" class="company-logo" loading="lazy">
+        </a>
+      </div>
+      <section id="resume-section"></section>
+    </section>
+
+    <!-- About Snapshot -->
+    <section class="about-snapshot scroll-reveal">
+      <div class="snapshot-content">
+        <div class="passion-statement">
+          <h2>The Intersection</h2>
+          <p>I'm fascinated by where <strong>technology meets human behavior</strong>. Whether I'm building email campaigns, analyzing market sentiment, or designing user experiences, I'm always asking: <em>How do we create meaningful connections in our digital world?</em></p>
+
+          <!-- Resume Section -->
+          <div class="resume-button-section">
+            <a href="path/to/your-resume.pdf" class="resume-btn" target="_blank">
+              <span class="resume-icon">📄</span>
+              View My Resume
+            </a>
+          </div>
+        </div>
+
+        <div class="quick-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="70">0</span>
+            <span class="stat-label">Email Open Rate</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="2000">0</span>
+            <span class="stat-label">Students Reached</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="6">0</span>
+            <span class="stat-label">Industries Explored</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Roles -->
+    <section class="experience-preview scroll-reveal">
+      <h2>Currently</h2>
+      <div class="current-roles">
+        <div class="role-card scroll-reveal">
+          <span class="role-tag">Product Marketing</span>
+          <h3>eCornell</h3>
+          <p>Leading website refresh and automating student engagement workflows</p>
+        </div>
+        <div class="role-card scroll-reveal">
+          <span class="role-tag">Research</span>
+          <h3>Millennium</h3>
+          <p>Building sentiment analysis pipelines for financial forecasting</p>
+        </div>
+        <div class="role-card scroll-reveal">
+          <span class="role-tag">Leadership</span>
+          <h3>Women in Computing</h3>
+          <p>Co-President creating opportunities for 2,000+ students</p>
+        </div>
+      </div>
+      <div class="experience-cta" id="contact">
+        <a href="about.html" class="button-link">More About Me →</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section scroll-reveal">
+      <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+
+      <div class="contact-content">
+        <h2>Let's Connect</h2>
+        <p>Ready to create something meaningful together?</p>
+
+        <div class="contact-card">
+          <a href="mailto:dm927@cornell.edu" class="contact-primary">
+            <div>
+              <span class="contact-title">Start a Conversation</span>
+              <span class="contact-subtitle">dm927@cornell.edu</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -70,28 +286,28 @@
   <footer>
     <!-- Source: (original work) Douae Maarouf -->
     <div class="star-decor">
-      <img src="images/star-decor.png" alt="Star Decor"/>
+      <img src="images/star-decor.png" alt="Star Decor" loading="lazy"/>
     </div>
 
     <div class="social-links">
-    <a href="https://www.linkedin.com/in/douae-m" target="_blank" aria-label="LinkedIn">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-      </svg>
-    </a>
+      <a href="https://www.linkedin.com/in/douae-m" target="_blank" aria-label="LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
 
-    <a href="https://www.github.com/douaemaarouf" target="_blank" aria-label="GitHub">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-      </svg>
-    </a>
+      <a href="https://www.github.com/douaemaarouf" target="_blank" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+      </a>
 
-    <a href="https://medium.com/@douaemaarouff" target="_blank" aria-label="Medium">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
-      </svg>
-    </a>
-  </div>
+      <a href="https://medium.com/@douaemaarouff" target="_blank" aria-label="Medium">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+        </svg>
+      </a>
+    </div>
 
     <p>Contact me at <a href="mailto:dm927@cornell.edu">dm927@cornell.edu</a></p>
   </footer>
