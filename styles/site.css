@@ -3532,3 +3532,186 @@ footer.dark-footer p {
     padding: 20px;
   }
 }
+
+
+/* ADD THESE ENHANCED STYLES TO THE END OF YOUR site.css FILE FOR THE COMPLETE MCCI MODAL */
+
+/* Better spacing for longer content */
+
+
+/* Project details styling */
+.case-study-modal .case-section p strong {
+  color: var(--shadow);
+  font-weight: 600;
+}
+
+/* Testimonial/Quote enhanced styling */
+.case-study-modal .case-section div[style*="background: var(--studio)"] {
+  background: linear-gradient(135deg, var(--studio), #ffffff) !important;
+  border-left: 4px solid var(--rain-storm) !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  margin: 24px 0 !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+  position: relative;
+}
+
+/* Add quote marks to testimonials */
+.case-study-modal .case-section div[style*="background: var(--studio)"]:before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--rain-storm);
+  opacity: 0.3;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+/* Better spacing for project overview section */
+.case-study-modal .case-section:first-child {
+  background: linear-gradient(135deg, #f8f9fa, var(--studio));
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  border-left: 4px solid var(--rain-storm);
+}
+
+/* Improve bullet point styling */
+.case-study-modal .case-section ul {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.case-study-modal .case-section li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  position: relative;
+}
+
+/* Custom bullet points */
+.case-study-modal .case-section li:before {
+  content: "▸";
+  color: var(--rain-storm);
+  font-size: 1.1em;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+/* Section dividers */
+.case-study-modal .case-section + .case-section {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Special styling for key sections */
+.case-study-modal .case-section:has(h3:contains("TL;DR")) {
+  background: var(--bliss);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--desert);
+}
+
+/* Enhanced tech stack pills */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tech-pill {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, var(--rain-storm), var(--shadow));
+  color: white;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(127, 143, 142, 0.3);
+}
+
+/* Improve readability for longer content */
+.case-study-modal .modal-body {
+  line-height: 1.8;
+  padding: 20px 40px 60px 40px; /* Extra bottom padding for scroll */
+}
+
+.case-study-modal .case-section p {
+  font-size: 16px;
+  margin-bottom: 18px;
+  color: #484848;
+}
+
+/* Better mobile experience for long content */
+@media (max-width: 768px) {
+  .case-study-modal .modal-container {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .case-study-modal .modal-body {
+    padding: 15px 20px 50px 20px;
+  }
+
+  .case-study-modal .case-section h4 {
+    font-size: 1.1rem;
+    margin: 20px 0 10px 0;
+    padding-left: 12px;
+  }
+
+  .case-study-modal .case-section {
+    margin-bottom: 28px;
+  }
+
+  .case-study-modal .case-section + .case-section {
+    margin-top: 32px;
+    padding-top: 24px;
+  }
+
+  .case-study-modal .case-section:first-child {
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+
+  /* Smaller testimonial quotes on mobile */
+  .case-study-modal .case-section div[style*="background: var(--studio)"]:before {
+    font-size: 2rem;
+    top: 8px;
+    left: 16px;
+  }
+}
+
+/* Smooth scrolling for modal content */
+.case-study-modal .modal-content {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for modal */
+.case-study-modal .modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.case-study-modal .modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.case-study-modal .modal-content::-webkit-scrollbar-thumb {
+  background: var(--rain-storm);
+  border-radius: 4px;
+}
+
+.case-study-modal .modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--shadow);
+}
+
+

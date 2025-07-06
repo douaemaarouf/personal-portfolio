@@ -293,52 +293,162 @@ $(document).ready(function () {
 
   // Case study data
   const caseStudies = {
-    'email-marketing': {
-      tag: 'B2B Marketing',
-      title: 'Automated Email Campaigns',
-      subtitle: 'Built lead-nurture flows with advanced segmentation that achieved 70% open rates',
+    'mcci-automation': {
+      tag: 'Marketing Automation',
+      title: 'Building MCCI\'s First Email Automation Workflows',
+      subtitle: 'From zero automation to intelligent, behavior-driven email flows—reducing bounce rates from 18% to 6%',
       content: `
         <div class="case-section">
-          <h3>Challenge</h3>
-          <p>eCornell needed to improve their student engagement and conversion rates through more effective email marketing. Their existing campaigns had low open rates and poor segmentation.</p>
+          <h3>🚀 Project Overview</h3>
+          <p><strong>Role:</strong> Marketing & Automation Intern<br>
+          <strong>Timeline:</strong> June–August 2024<br>
+          <strong>Scope:</strong> Strategy, segmentation, copywriting, automation workflows, A/B testing, CRM troubleshooting</p>
         </div>
 
         <div class="case-section">
-          <h3>Solution</h3>
-          <p>I designed and implemented automated email campaigns with advanced behavioral segmentation, personalized content paths, and strategic timing optimization.</p>
+          <h3>🚨 The Challenge</h3>
+          <p>MCCI had <strong>never used email automation before</strong>. The system was entirely manual — no drip sequences, no triggers, no performance data. As their first marketing intern, my job was to build that structure from scratch.</p>
+          <p>My manager gave me the vision — three campaigns that could lay the foundation for smarter, more scalable communication. I brought strategy, user perspective, and voice — and helped usher in a new era of marketing for the company.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>🎯 My Mission</h3>
+          <p>To design and launch an intelligent, automated email system that would:</p>
           <ul>
-            <li>Created 5 distinct customer journey flows based on user behavior</li>
-            <li>Implemented dynamic content personalization using student data</li>
-            <li>A/B tested subject lines, send times, and content formats</li>
-            <li>Set up automated triggers based on course interactions</li>
+            <li>Re-engage abandoned shoppers</li>
+            <li>Collect insights from returning customers</li>
+            <li>Nurture Milesight product buyers with co-branded storytelling</li>
+            <li>Reduce bounce rates and increase conversion</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h3>🧠 My Process</h3>
+
+          <h4>🛠️ 1. Research & Infrastructure</h4>
+          <p>My onboarding focused on researching automation best practices and how tools like Shopify, Mailchimp, and Zapier (which we didn't yet have access to) could scale outreach while keeping things personal. I approached automation not just as a workflow, but as a way to free up space for the work that really matters — human support, storytelling, and growth.</p>
+          <ul>
+            <li>Audited Shopify segments and cleaned up customer data</li>
+            <li>Created filters for behavior-based triggers like 3+ orders and Milesight purchases</li>
+            <li>Wrote reusable header/footer blocks and tracked engagement using UTM links</li>
+          </ul>
+
+          <h4>✍️ 2. Copy + Flow Design</h4>
+          <p>I created over 20 emails across three campaign types, each grounded in user psychology and written to feel human and credible — but not transactional.</p>
+          <ul>
+            <li>Built 3–9 step drip flows depending on campaign complexity</li>
+            <li>Crafted original subject lines and CTAs with variant testing</li>
+            <li>Balanced urgency, warmth, and clarity in each send</li>
+          </ul>
+
+          <h4>🧪 3. Testing + Optimization</h4>
+          <ul>
+            <li>Manually QA'd each workflow using test data and real-time triggers</li>
+            <li>Removed timing bottlenecks (like the default 24-hour cart delay)</li>
+            <li>Cleaned the list to reduce bounce rate from 18% to ~6%</li>
+            <li>Adjusted copy midstream based on early behavior + feedback from my manager</li>
           </ul>
         </div>
 
         <div class="case-stats">
           <div class="stat-item-modal">
-            <span class="stat-number-modal">70%</span>
-            <span class="stat-label-modal">Open Rate</span>
+            <span class="stat-number-modal">18% → 6%</span>
+            <span class="stat-label-modal">Bounce Rate Reduction</span>
           </div>
           <div class="stat-item-modal">
-            <span class="stat-number-modal">45%</span>
-            <span class="stat-label-modal">Click Rate</span>
+            <span class="stat-number-modal">20+</span>
+            <span class="stat-label-modal">Emails Created</span>
           </div>
           <div class="stat-item-modal">
-            <span class="stat-number-modal">2,000+</span>
-            <span class="stat-label-modal">Students Reached</span>
+            <span class="stat-number-modal">3</span>
+            <span class="stat-label-modal">Campaign Types</span>
           </div>
         </div>
 
         <div class="case-section">
-          <h3>Results</h3>
-          <p>The new email campaigns resulted in significantly higher engagement rates and improved student enrollment in continuing education programs.</p>
+          <h3>🚀 What We Launched</h3>
 
-          <h3>Tech Stack</h3>
+          <h4>🛒 Abandoned Cart Recovery</h4>
+          <p>Built a series of emails triggered after checkout was initiated but not completed.</p>
+          <ul>
+            <li>Optimized subject lines via A/B testing and adjusted send timing based on user drop-off</li>
+            <li>Manually tested every step of the workflow on myself to ensure smooth delivery</li>
+            <li>Reframed copy from "Don't forget this" → "Need help deciding what's best for your project?"</li>
+          </ul>
+
+          <h4>🔁 Returning Customers (3+ Orders)</h4>
+          <p>Created a customer segment in Shopify for high-value repeat buyers (8% of the total customer base).</p>
+          <ul>
+            <li>Designed a 7-part drip survey campaign to gather insights and reinforce loyalty</li>
+            <li>Wrote dynamically personalized emails with varying tone and CTA length</li>
+            <li>Overcame Shopify's platform limitations by manually exporting and triggering email sends</li>
+          </ul>
+
+          <h4>📦 Milesight Lead Nurturing</h4>
+          <p>Developed co-branded campaigns for MCCI's flagship IoT hardware partner, Milesight.</p>
+          <ul>
+            <li>Tied in LinkedIn campaign updates and the Milesight Impact Award to spark engagement</li>
+            <li>Personalized CTAs based on customer type (rep contact vs. direct application)</li>
+            <li>One of the emails led to a highly engaged lead that the team began closing</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h3>🎯 Results & Reflection</h3>
+          <p>This internship was both a test and a launchpad. I didn't just learn how to use Shopify's automation — I was learning how to think like a system designer, a copywriter, and a strategist all at once and how to build infrastructure that lasts.</p>
+
+          <p>Even though this was my first exposure to email automation, I walked away having:</p>
+          <ul>
+            <li>Launched 3 full-funnel email campaigns from scratch</li>
+            <li>Applied behavioral segmentation logic to real customer data</li>
+            <li>Wrote and structured 20+ emails that blended strategy with story</li>
+            <li>Built foundational workflows that the company still uses today</li>
+          </ul>
+
+          <p>More importantly, I saw the impact — not just in clicks or opens, but in a company beginning to work smarter, not harder.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>📈 Impact</h3>
+          <p>While this was my first internship — and the company's first time implementing email automation — we began seeing early signs of success even before metrics were fully tracked.</p>
+
+          <div style="background: var(--studio); padding: 20px; border-radius: 12px; border-left: 4px solid var(--rain-storm); margin: 20px 0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+            <p style="font-style: italic; margin: 0; color: #484848; font-size: 16px; line-height: 1.6;">
+              "We had a great response to one of the emails from the Milesight campaign you created, and we are going to get a nice sale from it! It takes a while, but things eventually work."
+            </p>
+            <p style="font-weight: 600; margin: 10px 0 0 0; color: #1d1d1f; font-size: 14px;">
+              — Michelle Keefer, Director of Strategy & Outreach
+            </p>
+          </div>
+
+          <p>These campaigns now serve as the template for all of MCCI's future automated efforts, providing a scalable system that can evolve with the business.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>🧠 If I Had More Time...</h3>
+          <ul>
+            <li>I would have integrated Zapier to expand behavioral triggers beyond Shopify's limits</li>
+            <li>I'd build a live reporting dashboard to visualize campaign success and improve attribution</li>
+            <li>I would have experimented with user-generated content from survey responses</li>
+            <li>Write a customer journey map and align emails to lifecycle stages</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h3>🧾 TL;DR</h3>
+          <p>I helped MCCI move from zero automation to smart, behavior-driven email flows — built from scratch, tested by hand, and still running.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>🛠️ Tools Used</h3>
           <div class="tech-stack">
+            <span class="tech-pill">Shopify Email Automations</span>
             <span class="tech-pill">Mailchimp</span>
-            <span class="tech-pill">Zapier</span>
-            <span class="tech-pill">Google Analytics</span>
-            <span class="tech-pill">A/B Testing</span>
+            <span class="tech-pill">Google Sheets</span>
+            <span class="tech-pill">A/B Subject Line Testing</span>
+            <span class="tech-pill">Customer Behavior Filtering</span>
+            <span class="tech-pill">UTM Link Tracking</span>
+            <span class="tech-pill">Manual Segmentation</span>
           </div>
         </div>
       `
