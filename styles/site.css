@@ -2394,3 +2394,235 @@ footer.dark-footer a:hover {
     grid-row: span 1;
   }
 }
+
+/* OPTIMIZED PHONE GALLERY CSS - Add these to your site.css */
+
+/* Enhanced photo grid with better performance */
+.photo-grid-phone {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 140px;
+  gap: 1px;
+  background: #000;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  height: calc(100% - 90px);
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /* Enhanced performance properties */
+  will-change: scroll-position;
+  transform: translateZ(0);
+  overscroll-behavior: contain;
+  /* Prevent layout thrashing */
+  contain: layout style paint;
+}
+
+/* Optimized photo items */
+.photo-item {
+  background: #333;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  width: 100%;
+  height: 100%;
+  /* Enhanced performance */
+  contain: layout style paint;
+  /* GPU acceleration */
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.photo-item:hover {
+  transform: scale(1.02) translateZ(0);
+  z-index: 100;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Optimized images */
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* Remove unnecessary transitions for performance */
+  transition: opacity 0.3s ease;
+  /* Optimize rendering */
+  image-rendering: optimizeQuality;
+  contain: layout style;
+  /* Prevent layout shifts */
+  background-color: #333;
+}
+
+/* Loading state for images */
+.photo-item img:not(.loaded) {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+}
+
+/* Loading animation */
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Spinner animation for modal */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Enhanced modal with better performance */
+.image-modal {
+  /* Use transform instead of changing properties */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  /* Optimize for animations */
+  will-change: opacity, transform;
+}
+
+/* Optimize gallery container */
+.phone-gallery {
+  /* Prevent unnecessary repaints */
+  contain: layout style paint;
+  /* Optimize for animations */
+  will-change: transform;
+}
+
+/* Enhanced scroll indicator */
+.scroll-indicator {
+  /* GPU acceleration */
+  transform: translateZ(0);
+  will-change: transform, opacity;
+  /* Optimize transitions */
+  transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.phone-gallery.scrolled .scroll-indicator {
+  opacity: 0;
+  transform: translateY(-10px) translateZ(0);
+}
+
+/* Performance optimizations for different screen sizes */
+@media (max-width: 768px) {
+  .photo-grid-phone {
+    grid-auto-rows: 110px;
+    /* Reduce complexity on mobile */
+    will-change: scroll-position;
+  }
+
+  .photo-item {
+    /* Simpler hover on mobile for better performance */
+    transition: none;
+  }
+
+  .photo-item:hover {
+    transform: none;
+    z-index: auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-grid-phone {
+    grid-auto-rows: 90px;
+    /* Further reduce complexity */
+    contain: layout;
+  }
+
+  /* Disable large/wide/tall variants on small screens for better performance */
+  .photo-item.large,
+  .photo-item.wide,
+  .photo-item.tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .photo-grid-phone {
+    scroll-behavior: auto;
+  }
+
+  .photo-item {
+    transition: none;
+  }
+
+  .photo-item:hover {
+    transform: none;
+  }
+
+  .scroll-indicator {
+    animation: none;
+  }
+}
+
+/* Enhanced phone frame performance */
+.phone-frame {
+  /* Optimize for complex styling */
+  contain: layout style paint;
+  will-change: transform;
+  /* Ensure smooth rendering */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.phone-screen {
+  /* Optimize nested content */
+  contain: layout style paint;
+  /* GPU acceleration */
+  transform: translateZ(0);
+}
+
+/* Critical image optimization */
+.photo-item img[src*="data:image/svg"] {
+  /* Style placeholder images */
+  background: #f5f5f5;
+  opacity: 0.7;
+}
+
+.photo-item img.loaded {
+  /* Fully loaded images */
+  background: none;
+  opacity: 1;
+}
+
+/* Optimized dynamic island */
+.dynamic-island {
+  /* Reduce repaints */
+  contain: layout style;
+  will-change: width, background-color;
+}
+
+/* Performance hint for the entire gallery section */
+.phone-gallery {
+  /* Hint to browser that this section will have complex animations */
+  contain: layout style paint;
+}
+
+/* Optimize status bar elements */
+.status-bar {
+  /* Prevent unnecessary repaints */
+  contain: layout style;
+}
+
+/* Battery and signal icons optimization */
+.battery-icon,
+.signal-bars {
+  /* Small elements optimization */
+  contain: layout;
+  will-change: auto;
+}
+
+

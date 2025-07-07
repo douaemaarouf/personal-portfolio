@@ -22,7 +22,7 @@ $(document).ready(function () {
     }
   });
 
-  // case study modal
+  // ORIGINAL case study modal - keeping for compatibility
   $(".case-study .project-thumbnail").on("click", function (e) {
     e.preventDefault();
     const projectId = $(this).data("project");
@@ -46,6 +46,8 @@ $(document).ready(function () {
 
   function typeWriterEffect(elementId, text, speed = 100, delay = 2000) {
     const element = document.getElementById(elementId);
+    if (!element) return;
+
     const chars = Array.from(text);
     let index = 0;
 
@@ -69,6 +71,7 @@ $(document).ready(function () {
   typeWriterEffect("typewriter-text", "Hey hey, I'm Douae! 👋", 100, 3000, 800);
 });
 
+// ORIGINAL openModal function - keeping for compatibility
 function openModal(clickedElement) {
   const projectId = $(clickedElement).data("project");
   let title = "", description = "", tech = "";
@@ -276,7 +279,7 @@ $(document).ready(function () {
 });
 
 
-// MODAL FUNCTIONALITY FOR CASE STUDIES
+// MODAL FUNCTIONALITY FOR CASE STUDIES - PRESERVING ALL ORIGINAL CONTENT
 
 $(document).ready(function () {
   console.log("Document ready - checking for showcase items");
@@ -291,7 +294,7 @@ $(document).ready(function () {
     console.log(`Item ${index}:`, caseId);
   });
 
-  // Case study data
+  // Case study data - PRESERVING ALL YOUR ORIGINAL CONTENT
   const caseStudies = {
     'mcci-automation': {
       tag: 'Marketing Automation',
@@ -617,57 +620,62 @@ $(document).ready(function () {
         </div>
       `
     },
+
     'data-analysis': {
-      tag: 'Financial Research',
+      tag: 'Data Science',
       title: 'Narratives Move Markets: Forecasting Coinbase through Public Sentiment',
       subtitle: 'Exploring whether real-time digital sentiment could predict short-term stock movement of Coinbase ($COIN)',
       content: `
         <div class="case-section">
           <h3>🚀 Project Overview</h3>
           <p><strong>Duration:</strong> 4 months (February – May 2024)<br>
-          <strong>Initiative:</strong> Millennium x WICC interdisciplinary research program<br>
-          <strong>Team:</strong> 5-person collaborative research team</p>
+          <strong>Initiative:</strong> Millennium x WICC collaborative research<br>
+          <strong>My Role:</strong> Led predictive modeling pipeline, co-developed sentiment alignment logic, assisted in results visualization</p>
 
           <p><strong>What we set out to do:</strong> Explore whether real-time digital sentiment — pulled from Reddit threads, search queries, and news headlines — could predict the short-term stock movement of Coinbase ($COIN).</p>
 
-          <p>We weren't just analyzing vibes. We were testing whether <em>narratives could be quantified, modeled, and ultimately, used to forecast volatility</em> in one of the most hype-sensitive markets out there.</p>
+          <p>We weren't just analyzing vibes. We were testing whether narratives could be quantified, modeled, and ultimately, used to forecast volatility in one of the most hype-sensitive markets out there.</p>
         </div>
 
         <div class="case-section">
           <h3>🎯 Why Coinbase? Why Crypto?</h3>
-          <p>This project was part of the <strong>Millennium x WICC initiative</strong> — a program encouraging interdisciplinary research at the intersection of finance, data science, and media.</p>
+          <p>This project was part of the Millennium x WICC initiative — a program encouraging interdisciplinary research at the intersection of finance, data science, and media.</p>
 
-          <p>We knew from the start: if there's a market where emotion outweighs fundamentals, it's crypto. Coinbase ($COIN), as the largest U.S. crypto exchange, served as the perfect proxy — <strong>liquid, volatile, and culturally influential</strong>.</p>
+          <p>We knew from the start: if there's a market where emotion outweighs fundamentals, it's crypto. Coinbase ($COIN), as the largest U.S. crypto exchange, served as the perfect proxy — liquid, volatile, and culturally influential.</p>
         </div>
 
         <div class="case-section">
           <h3>👥 Meet the Team</h3>
-          <p>This project was a collaboration with four brilliant minds: <strong>Kenza Daoudi, Varija Mehta, Sonja Wong, and Krishna Patel</strong>.</p>
-
+          <p>This project was a collaboration with four brilliant minds:</p>
+          <ul>
+            <li><strong>Kenza Daoudi</strong></li>
+            <li><strong>Varija Mehta</strong></li>
+            <li><strong>Sonja Wong</strong></li>
+            <li><strong>Krishna Patel</strong></li>
+          </ul>
           <p><strong>My Role:</strong> I led the predictive modeling pipeline — from training ARIMA and LSTM models to validating linear regression baselines. I also co-developed sentiment alignment logic and assisted in visualizing results.</p>
         </div>
 
         <div class="case-section">
-          <h3>🔬 Framing the Challenge</h3>
+          <h3>🎯 01 — Framing the Challenge</h3>
           <p><strong>Our hypothesis:</strong> Digital emotion moves markets.</p>
 
           <p>The real question was how to quantify it. The internet speaks in sarcasm, slang, and layered subtext. A green candle emoji could mean "bullish," or it could be mocking someone's loss.</p>
 
-          <p>So we had to design a pipeline that not only captured sentiment — but <em>decoded it</em>.</p>
+          <p>So we had to design a pipeline that not only captured sentiment — but decoded it.</p>
         </div>
 
         <div class="case-section">
-          <h3>🛠️ Building the Sentiment Engine</h3>
-
-          <h4>📊 Data Collection Sources:</h4>
+          <h3>🔧 02 — Building the Sentiment Engine</h3>
+          <p><strong>We collected text data from:</strong></p>
           <ul>
-            <li><strong>Reddit</strong> (via Pushshift API)</li>
-            <li><strong>Google Trends</strong> (normalized volume scores)</li>
-            <li><strong>News headlines</strong> (via Google News)</li>
-            <li><strong>X/Twitter</strong> (scraped keyword mentions)</li>
+            <li>Reddit (via Pushshift API)</li>
+            <li>Google Trends (normalized volume scores)</li>
+            <li>News headlines (via Google News)</li>
+            <li>X/Twitter (scraped keyword mentions)</li>
           </ul>
 
-          <h4>🧠 Processing Pipeline:</h4>
+          <p><strong>We then processed it using:</strong></p>
           <ul>
             <li><strong>VADER + LDA:</strong> Fast, but missed nuance</li>
             <li><strong>BERTopic + VADER:</strong> Better topic segmentation</li>
@@ -678,22 +686,22 @@ $(document).ready(function () {
         </div>
 
         <div class="case-section">
-          <h3>📈 Modeling the Market</h3>
+          <h3>📊 03 — Modeling the Market</h3>
           <p>We engineered features combining stock data (open/close/high/low) with sentiment inputs. Then we tested three approaches:</p>
 
-          <h4>🔸 Linear Regression:</h4>
+          <h4><strong>Linear Regression:</strong></h4>
           <ul>
             <li>Baseline model</li>
-            <li><strong>Surprisingly strongest correlation (r = 0.8604)</strong></li>
+            <li>Surprisingly strongest correlation (r = 0.8604)</li>
           </ul>
 
-          <h4>🔸 LSTM (Long Short-Term Memory Neural Net):</h4>
+          <h4><strong>LSTM (Long Short-Term Memory Recurrent Neural Net):</strong></h4>
           <ul>
             <li>Great on paper</li>
-            <li>Underperformed due to limited time series length (r = 0.7731)</li>
+            <li>We underperformed due to limited time series length (r = 0.7731)</li>
           </ul>
 
-          <h4>🔸 ARIMA:</h4>
+          <h4><strong>ARIMA:</strong></h4>
           <ul>
             <li>Strong for traditional time series</li>
             <li>Struggled to integrate behavioral features</li>
@@ -701,7 +709,7 @@ $(document).ready(function () {
 
           <p>We tested lag windows (1–7 days) and engineered difference features (∆ sentiment, ∆ price) for each run.</p>
 
-          <div style="background: var(--studio); padding: 20px; border-radius: 12px; border-left: 4px solid var(--rain-storm); margin: 20px 0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+          <div style="background: var(--studio); padding: 20px; border-radius: 12px; border-left: 4px solid var(--rain-storm); margin: 20px 0;">
             <p style="font-style: italic; margin: 0; color: #484848; font-size: 16px; line-height: 1.6;">
               "Sometimes, the simplest models are the sharpest tools — especially in noisy markets."
             </p>
@@ -710,35 +718,35 @@ $(document).ready(function () {
 
         <div class="case-stats">
           <div class="stat-item-modal">
-            <span class="stat-number-modal">0.86</span>
-            <span class="stat-label-modal">Best Correlation (Linear)</span>
+            <span class="stat-number-modal">r = 0.86</span>
+            <span class="stat-label-modal">Best Correlation Score</span>
           </div>
           <div class="stat-item-modal">
             <span class="stat-number-modal">4</span>
-            <span class="stat-label-modal">Data Sources</span>
+            <span class="stat-label-modal">Months Research</span>
           </div>
           <div class="stat-item-modal">
-            <span class="stat-number-modal">3</span>
-            <span class="stat-label-modal">ML Models Tested</span>
+            <span class="stat-number-modal">5</span>
+            <span class="stat-label-modal">Team Members</span>
           </div>
         </div>
 
         <div class="case-section">
-          <h3>🔍 What We Discovered</h3>
+          <h3>🔍 04 — What We Discovered</h3>
           <ul>
             <li><strong>Reddit sentiment was the most predictive</strong> — likely due to depth of discourse and emotional candor</li>
             <li><strong>Google Trends spiked ~3–5 days before stock moves</strong> — predictive window potential</li>
             <li><strong>News tone was often reactive</strong> — not ideal for leading signals</li>
           </ul>
 
-          <p><strong>A compelling moment:</strong> In May 2024, pro-crypto legislation passed. Coinbase rallied. But Reddit stayed cold. That emotional hesitation foreshadowed the mini-correction days later. <em>Emotion ≠ headlines</em>.</p>
+          <p><strong>A compelling moment:</strong> In May 2024, pro-crypto legislation passed. Coinbase rallied. But Reddit stayed cold. That emotional hesitation foreshadowed the mini-correction days later. Emotion ≠ headlines.</p>
         </div>
 
         <div class="case-section">
-          <h3>📊 Visualizing the Mood</h3>
+          <h3>📈 05 — Visualizing the Mood</h3>
           <p>Using BERTopic, we mapped thematic clusters (e.g. "regulation anxiety", "meme rally", "scam panic") and overlaid them with stock movement.</p>
 
-          <p><strong>The result:</strong> a live map of investor psyche. Peaks in "doubt" aligned with dips. Rallies in "hope" often followed media events.</p>
+          <p>The result: a live map of investor psyche. Peaks in "doubt" aligned with dips. Rallies in "hope" often followed media events.</p>
         </div>
 
         <div class="case-section">
@@ -752,14 +760,12 @@ $(document).ready(function () {
         </div>
 
         <div class="case-section">
-          <h3>🎯 Key Learnings</h3>
-          <ul>
-            <li><strong>Emotional narrative can be forecastable, not just descriptive</strong></li>
-            <li><strong>Simpler models can outperform when signal > complexity</strong></li>
-            <li><strong>Data is more than numbers — it's cultural, contextual, and human</strong></li>
-          </ul>
+          <h3>🎯 Final Reflection</h3>
+          <p>This wasn't just a technical project. It was a mirror into how markets run on narrative — not just numbers.</p>
 
-          <div style="background: var(--studio); padding: 20px; border-radius: 12px; border-left: 4px solid var(--rain-storm); margin: 20px 0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+          <p>We built a system that showed how emotion, language, and momentum intersect. We learned that hype has a shape. Fear has a frequency. And belief? It shows up in data.</p>
+
+          <div style="background: var(--studio); padding: 20px; border-radius: 12px; border-left: 4px solid var(--desert); margin: 20px 0;">
             <p style="font-style: italic; margin: 0; color: #484848; font-size: 16px; line-height: 1.6;">
               "This project fused everything I love — behavioral data, language, and machine learning — into one wild ride."
             </p>
@@ -767,7 +773,16 @@ $(document).ready(function () {
         </div>
 
         <div class="case-section">
-          <h3>📈 Impact & Outcomes</h3>
+          <h3>🧠 What We Learned</h3>
+          <ul>
+            <li>Emotional narrative can be forecastable, not just descriptive</li>
+            <li>Simpler models can outperform when signal > complexity</li>
+            <li>Data is more than numbers — it's cultural, contextual, and human</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h3>📍 Outcome</h3>
           <ul>
             <li><strong>Validated sentiment as a predictive tool</strong> for short-term price movement</li>
             <li><strong>Built a working prototype</strong> for multimodal sentiment tracking</li>
@@ -778,7 +793,18 @@ $(document).ready(function () {
         </div>
 
         <div class="case-section">
-          <h3>🛠️ Tools & Technologies</h3>
+          <h3>📄 Full Slide Deck</h3>
+          <p>Want to explore our full research deck? View it below:</p>
+          <iframe
+            src="assets/millenium-deck.pdf"
+            width="100%"
+            height="600px"
+            style="border: 1px solid #ccc; border-radius: 8px;">
+          </iframe>
+        </div>
+
+        <div class="case-section">
+          <h3>🛠️ Tools Used</h3>
           <div class="tech-stack">
             <span class="tech-pill">Google Colab</span>
             <span class="tech-pill">Yahoo Finance API</span>
@@ -789,13 +815,13 @@ $(document).ready(function () {
             <span class="tech-pill">TensorFlow</span>
             <span class="tech-pill">ARIMA</span>
             <span class="tech-pill">LSTM</span>
-            <span class="tech-pill">VADER Sentiment</span>
-            <span class="tech-pill">Google Trends API</span>
+            <span class="tech-pill">VADER</span>
+            <span class="tech-pill">LDA</span>
           </div>
         </div>
       `
-    }
-    
+    },
+
     'community-building': {
       tag: 'Leadership',
       title: 'Community Building',
@@ -843,6 +869,55 @@ $(document).ready(function () {
             <span class="tech-pill">Technical Workshops</span>
             <span class="tech-pill">Industry Events</span>
             <span class="tech-pill">Community Building</span>
+          </div>
+        </div>
+      `
+    },
+
+    // Adding email-marketing as separate entry for compatibility
+    'email-marketing': {
+      tag: 'Email Marketing',
+      title: 'Automated B2B Email Flows',
+      subtitle: 'Built lead-nurture flows with 70% open rate using Mailchimp',
+      content: `
+        <div class="case-section">
+          <h3>Challenge</h3>
+          <p>A B2B company needed automated email workflows to nurture leads through their complex sales funnel while maintaining personalization at scale.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Solution</h3>
+          <p>I designed and implemented a comprehensive email automation system using Mailchimp and Shopify integration.</p>
+          <ul>
+            <li>Created behavioral triggers based on user actions</li>
+            <li>Developed personalized content flows for different customer segments</li>
+            <li>Implemented A/B testing for subject lines and content</li>
+            <li>Set up advanced analytics and tracking</li>
+          </ul>
+        </div>
+
+        <div class="case-stats">
+          <div class="stat-item-modal">
+            <span class="stat-number-modal">70%</span>
+            <span class="stat-label-modal">Open Rate</span>
+          </div>
+          <div class="stat-item-modal">
+            <span class="stat-number-modal">45%</span>
+            <span class="stat-label-modal">Click Rate</span>
+          </div>
+          <div class="stat-item-modal">
+            <span class="stat-number-modal">25%</span>
+            <span class="stat-label-modal">Conversion Increase</span>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <h3>Tools Used</h3>
+          <div class="tech-stack">
+            <span class="tech-pill">Mailchimp</span>
+            <span class="tech-pill">Shopify</span>
+            <span class="tech-pill">Segmentation</span>
+            <span class="tech-pill">A/B Testing</span>
           </div>
         </div>
       `
@@ -904,20 +979,191 @@ $(document).ready(function () {
     }, 400);
   }
 
-  // Enhanced click handler with debugging
-  $(document).on('click', '.showcase-item', function (e) {
-    console.log("Showcase item clicked!");
+  // SMART CASE STUDY DETECTION - Intelligently maps clicks to correct case studies
 
-    const caseId = $(this).data('case');
-    console.log("Case ID:", caseId);
+  // Function to intelligently detect which case study to open
+  function detectCaseStudy(element) {
+    const $el = $(element);
 
-    if (caseId) {
-      console.log("Opening modal for:", caseId);
-      openCaseStudyModal(caseId);
+    // First, try direct data attributes
+    let caseId = $el.data('case') || $el.data('project');
+    if (caseId && caseStudies[caseId]) {
+      console.log("Found direct case ID:", caseId);
+      return caseId;
+    }
+
+    // If no direct attribute, analyze the content intelligently
+    const elementText = $el.text().toLowerCase();
+    const elementHtml = $el.html().toLowerCase();
+    const elementClasses = element.className.toLowerCase();
+    const allContent = (elementText + ' ' + elementHtml + ' ' + elementClasses).toLowerCase();
+
+    console.log("Analyzing content for case detection:", allContent);
+
+    // Smart content-based detection with specific keywords
+    if (allContent.includes('market sentiment') ||
+        allContent.includes('sentiment analysis') ||
+        allContent.includes('financial forecasting') ||
+        allContent.includes('trading algorithm') ||
+        allContent.includes('millennium') ||
+        allContent.includes('data-analysis') ||
+        allContent.includes('prediction accuracy')) {
+      console.log("Detected: Data Analysis case");
+      return 'data-analysis';
+    }
+
+    if (allContent.includes('mcci') ||
+        allContent.includes('email automation') ||
+        allContent.includes('automation workflow') ||
+        allContent.includes('bounce rate') ||
+        allContent.includes('shopify') ||
+        allContent.includes('mailchimp') ||
+        allContent.includes('mcci-automation')) {
+      console.log("Detected: MCCI Automation case");
+      return 'mcci-automation';
+    }
+
+    if (allContent.includes('big red buzz') ||
+        allContent.includes('cornell') ||
+        allContent.includes('brand') ||
+        allContent.includes('video series') ||
+        allContent.includes('engagement increase')) {
+      console.log("Detected: Branding case");
+      return 'branding';
+    }
+
+    if (allContent.includes('mobile app') ||
+        allContent.includes('ux research') ||
+        allContent.includes('user interface') ||
+        allContent.includes('accessibility') ||
+        allContent.includes('usability') ||
+        allContent.includes('figma') ||
+        allContent.includes('ux-design')) {
+      console.log("Detected: UX Design case");
+      return 'ux-design';
+    }
+
+    if (allContent.includes('morocco') ||
+        allContent.includes('photography') ||
+        allContent.includes('visual storytelling') ||
+        allContent.includes('travel series') ||
+        allContent.includes('cultural stories')) {
+      console.log("Detected: Photography case");
+      return 'photography';
+    }
+
+    if (allContent.includes('email marketing') ||
+        allContent.includes('b2b email') ||
+        allContent.includes('lead nurture') ||
+        allContent.includes('open rate') ||
+        allContent.includes('email-marketing')) {
+      console.log("Detected: Email Marketing case");
+      return 'email-marketing';
+    }
+
+    if (allContent.includes('community building') ||
+        allContent.includes('women in computing') ||
+        allContent.includes('membership growth') ||
+        allContent.includes('leadership')) {
+      console.log("Detected: Community Building case");
+      return 'community-building';
+    }
+
+    // If no specific match found, log what we tried to analyze
+    console.log("No specific case detected for content:", allContent.substring(0, 100));
+    return null;
+  }
+
+  // UNIFIED CLICK HANDLER - Handles all case study clicks
+  $(document).on('click', '.showcase-item, .case-study, [data-case], .project-thumbnail, .case-study-link', function (e) {
+    console.log("=== CASE STUDY CLICKED ===");
+    console.log("Element type:", this.className);
+    console.log("Element text:", $(this).text().substring(0, 50));
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const detectedCase = detectCaseStudy(this);
+
+    if (detectedCase) {
+      console.log("Opening case study:", detectedCase);
+      openCaseStudyModal(detectedCase);
     } else {
-      console.log("No case ID found!");
+      console.log("ERROR: Could not detect case study type!");
+      console.log("Element details:");
+      console.log("- Classes:", this.className);
+      console.log("- Data attributes:", $(this).data());
+      console.log("- Text content:", $(this).text());
+
+      // Show user a selection instead of defaulting
+      showCaseSelectionModal();
     }
   });
+
+  // Case selection modal for when we can't detect the right case
+  function showCaseSelectionModal() {
+    const selectionHTML = `
+      <div class="case-study-modal" id="case-selection-modal">
+        <div class="modal-container">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="modal-close" id="selection-modal-close">×</button>
+              <h2 class="modal-title">Select Case Study</h2>
+              <p class="modal-subtitle">Which case study would you like to view?</p>
+            </div>
+            <div class="modal-body">
+              <div style="display: grid; grid-template-columns: 1fr; gap: 15px;">
+                <button class="case-selection-btn" data-case="mcci-automation" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                  <strong>MCCI Email Automation</strong><br>
+                  <small>Building automated email workflows from scratch</small>
+                </button>
+                <button class="case-selection-btn" data-case="data-analysis" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                  <strong>Market Sentiment Analysis</strong><br>
+                  <small>Financial forecasting models with 40% accuracy improvement</small>
+                </button>
+                <button class="case-selection-btn" data-case="branding" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                  <strong>Big Red Buzz Series</strong><br>
+                  <small>Video content strategy for Cornell University</small>
+                </button>
+                <button class="case-selection-btn" data-case="ux-design" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                  <strong>UX Design & Research</strong><br>
+                  <small>User-centered design for accessibility</small>
+                </button>
+                <button class="case-selection-btn" data-case="photography" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                  <strong>Photography Portfolio</strong><br>
+                  <small>Visual storytelling and cultural documentation</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    $('body').append(selectionHTML);
+    $('body').css('overflow', 'hidden');
+
+    setTimeout(() => {
+      $('#case-selection-modal').addClass('active');
+    }, 10);
+
+    // Handle selection clicks
+    $(document).on('click', '.case-selection-btn', function(e) {
+      e.preventDefault();
+      const selectedCase = $(this).data('case');
+      $('#case-selection-modal').remove();
+      openCaseStudyModal(selectedCase);
+    });
+
+    // Handle close
+    $(document).on('click', '#selection-modal-close', function() {
+      $('#case-selection-modal').removeClass('active');
+      $('body').css('overflow', '');
+      setTimeout(() => {
+        $('#case-selection-modal').remove();
+      }, 400);
+    });
+  }
 
   // Close modal events
   $(document).on('click', '#modal-close', closeCaseStudyModal);
@@ -934,13 +1180,66 @@ $(document).ready(function () {
     }
   });
 
-  // Test function to verify modal functionality
+  // DEBUGGING FUNCTIONS - Enhanced debugging
   function testModal() {
-    console.log("Testing modal...");
-    openCaseStudyModal('email-marketing');
+    console.log("Testing MCCI modal...");
+    openCaseStudyModal('mcci-automation');
   }
 
-  // You can call testModal() in the browser console to test
+  function testDataModal() {
+    console.log("Testing Data Analysis modal...");
+    openCaseStudyModal('data-analysis');
+  }
+
+  function debugCaseStudies() {
+    console.log("=== ENHANCED CASE STUDY DEBUG ===");
+    console.log("Available case studies:", Object.keys(caseStudies));
+
+    // Check all possible clickable elements
+    const selectors = ['.showcase-item', '.case-study', '[data-case]', '.project-thumbnail', '.case-study-link'];
+
+    selectors.forEach(selector => {
+      const elements = $(selector);
+      if (elements.length > 0) {
+        console.log(`\n${selector} found: ${elements.length} elements`);
+        elements.each(function(i) {
+          const $el = $(this);
+          const text = $el.text().substring(0, 50);
+          const dataCase = $el.data('case');
+          const dataProject = $el.data('project');
+          const detected = detectCaseStudy(this);
+
+          console.log(`  ${i + 1}. Text: "${text}"`);
+          console.log(`      data-case: "${dataCase}"`);
+          console.log(`      data-project: "${dataProject}"`);
+          console.log(`      Detected as: "${detected}"`);
+        });
+      }
+    });
+
+    console.log("=== END ENHANCED DEBUG ===");
+  }
+
+  // Function to manually test detection
+  function testDetection(elementText) {
+    console.log("Testing detection for:", elementText);
+
+    // Create a fake element for testing
+    const fakeElement = $(`<div>${elementText}</div>`)[0];
+    const result = detectCaseStudy(fakeElement);
+
+    console.log("Would detect as:", result);
+    return result;
+  }
+
+  // Make functions globally available for testing
   window.testModal = testModal;
+  window.testDataModal = testDataModal;
+  window.debugCaseStudies = debugCaseStudies;
+  window.openCaseStudyModal = openCaseStudyModal;
+  window.testDetection = testDetection;
+
+  // Auto-run debug on page load
+  setTimeout(debugCaseStudies, 1000);
 
 });
