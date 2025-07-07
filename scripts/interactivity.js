@@ -617,59 +617,185 @@ $(document).ready(function () {
         </div>
       `
     },
-
     'data-analysis': {
-      tag: 'Data Science',
-      title: 'Market Sentiment Analysis',
-      subtitle: 'Financial forecasting models that improved prediction accuracy by 40%',
+      tag: 'Financial Research',
+      title: 'Narratives Move Markets: Forecasting Coinbase through Public Sentiment',
+      subtitle: 'Exploring whether real-time digital sentiment could predict short-term stock movement of Coinbase ($COIN)',
       content: `
         <div class="case-section">
-          <h3>Challenge</h3>
-          <p>Millennium Partners needed more accurate market sentiment analysis to improve their trading algorithms and risk assessment models.</p>
+          <h3>🚀 Project Overview</h3>
+          <p><strong>Duration:</strong> 4 months (February – May 2024)<br>
+          <strong>Initiative:</strong> Millennium x WICC interdisciplinary research program<br>
+          <strong>Team:</strong> 5-person collaborative research team</p>
+
+          <p><strong>What we set out to do:</strong> Explore whether real-time digital sentiment — pulled from Reddit threads, search queries, and news headlines — could predict the short-term stock movement of Coinbase ($COIN).</p>
+
+          <p>We weren't just analyzing vibes. We were testing whether <em>narratives could be quantified, modeled, and ultimately, used to forecast volatility</em> in one of the most hype-sensitive markets out there.</p>
         </div>
 
         <div class="case-section">
-          <h3>Solution</h3>
-          <p>I developed machine learning models that analyze social media sentiment, news sentiment, and market indicators to predict market movements.</p>
+          <h3>🎯 Why Coinbase? Why Crypto?</h3>
+          <p>This project was part of the <strong>Millennium x WICC initiative</strong> — a program encouraging interdisciplinary research at the intersection of finance, data science, and media.</p>
+
+          <p>We knew from the start: if there's a market where emotion outweighs fundamentals, it's crypto. Coinbase ($COIN), as the largest U.S. crypto exchange, served as the perfect proxy — <strong>liquid, volatile, and culturally influential</strong>.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>👥 Meet the Team</h3>
+          <p>This project was a collaboration with four brilliant minds: <strong>Kenza Daoudi, Varija Mehta, Sonja Wong, and Krishna Patel</strong>.</p>
+
+          <p><strong>My Role:</strong> I led the predictive modeling pipeline — from training ARIMA and LSTM models to validating linear regression baselines. I also co-developed sentiment alignment logic and assisted in visualizing results.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>🔬 Framing the Challenge</h3>
+          <p><strong>Our hypothesis:</strong> Digital emotion moves markets.</p>
+
+          <p>The real question was how to quantify it. The internet speaks in sarcasm, slang, and layered subtext. A green candle emoji could mean "bullish," or it could be mocking someone's loss.</p>
+
+          <p>So we had to design a pipeline that not only captured sentiment — but <em>decoded it</em>.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>🛠️ Building the Sentiment Engine</h3>
+
+          <h4>📊 Data Collection Sources:</h4>
           <ul>
-            <li>Built web scrapers for financial news and social media data</li>
-            <li>Implemented natural language processing for sentiment analysis</li>
-            <li>Created ensemble models combining multiple data sources</li>
-            <li>Developed real-time dashboard for monitoring sentiment trends</li>
+            <li><strong>Reddit</strong> (via Pushshift API)</li>
+            <li><strong>Google Trends</strong> (normalized volume scores)</li>
+            <li><strong>News headlines</strong> (via Google News)</li>
+            <li><strong>X/Twitter</strong> (scraped keyword mentions)</li>
           </ul>
+
+          <h4>🧠 Processing Pipeline:</h4>
+          <ul>
+            <li><strong>VADER + LDA:</strong> Fast, but missed nuance</li>
+            <li><strong>BERTopic + VADER:</strong> Better topic segmentation</li>
+            <li><strong>BERTopic + RoBERTa:</strong> Best performance on Reddit data due to sarcasm comprehension and contextual understanding</li>
+          </ul>
+
+          <p>Each day was mapped to a sentiment score using rolling averages and volume-adjusted weightings.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>📈 Modeling the Market</h3>
+          <p>We engineered features combining stock data (open/close/high/low) with sentiment inputs. Then we tested three approaches:</p>
+
+          <h4>🔸 Linear Regression:</h4>
+          <ul>
+            <li>Baseline model</li>
+            <li><strong>Surprisingly strongest correlation (r = 0.8604)</strong></li>
+          </ul>
+
+          <h4>🔸 LSTM (Long Short-Term Memory Neural Net):</h4>
+          <ul>
+            <li>Great on paper</li>
+            <li>Underperformed due to limited time series length (r = 0.7731)</li>
+          </ul>
+
+          <h4>🔸 ARIMA:</h4>
+          <ul>
+            <li>Strong for traditional time series</li>
+            <li>Struggled to integrate behavioral features</li>
+          </ul>
+
+          <p>We tested lag windows (1–7 days) and engineered difference features (∆ sentiment, ∆ price) for each run.</p>
+
+          <div style="background: var(--studio); padding: 20px; border-radius: 12px; border-left: 4px solid var(--rain-storm); margin: 20px 0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+            <p style="font-style: italic; margin: 0; color: #484848; font-size: 16px; line-height: 1.6;">
+              "Sometimes, the simplest models are the sharpest tools — especially in noisy markets."
+            </p>
+          </div>
         </div>
 
         <div class="case-stats">
           <div class="stat-item-modal">
-            <span class="stat-number-modal">40%</span>
-            <span class="stat-label-modal">Accuracy Improvement</span>
+            <span class="stat-number-modal">0.86</span>
+            <span class="stat-label-modal">Best Correlation (Linear)</span>
           </div>
           <div class="stat-item-modal">
-            <span class="stat-number-modal">1M+</span>
-            <span class="stat-label-modal">Data Points Analyzed</span>
+            <span class="stat-number-modal">4</span>
+            <span class="stat-label-modal">Data Sources</span>
           </div>
           <div class="stat-item-modal">
-            <span class="stat-number-modal">95%</span>
-            <span class="stat-label-modal">Model Confidence</span>
+            <span class="stat-number-modal">3</span>
+            <span class="stat-label-modal">ML Models Tested</span>
           </div>
         </div>
 
         <div class="case-section">
-          <h3>Technical Implementation</h3>
-          <p>The model processes real-time data streams and provides actionable insights for trading decisions, with automated alerts for significant sentiment shifts.</p>
+          <h3>🔍 What We Discovered</h3>
+          <ul>
+            <li><strong>Reddit sentiment was the most predictive</strong> — likely due to depth of discourse and emotional candor</li>
+            <li><strong>Google Trends spiked ~3–5 days before stock moves</strong> — predictive window potential</li>
+            <li><strong>News tone was often reactive</strong> — not ideal for leading signals</li>
+          </ul>
 
-          <h3>Tech Stack</h3>
+          <p><strong>A compelling moment:</strong> In May 2024, pro-crypto legislation passed. Coinbase rallied. But Reddit stayed cold. That emotional hesitation foreshadowed the mini-correction days later. <em>Emotion ≠ headlines</em>.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>📊 Visualizing the Mood</h3>
+          <p>Using BERTopic, we mapped thematic clusters (e.g. "regulation anxiety", "meme rally", "scam panic") and overlaid them with stock movement.</p>
+
+          <p><strong>The result:</strong> a live map of investor psyche. Peaks in "doubt" aligned with dips. Rallies in "hope" often followed media events.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>🚀 If I Had More Time...</h3>
+          <ul>
+            <li>Fine-tune RoBERTa on crypto-native slang (e.g. "rekt", "HODL", "NGMI")</li>
+            <li>Integrate on-chain signals like whale wallet movements</li>
+            <li>Build a real-time dashboard using Streamlit or Observable</li>
+            <li>Explore causal inference models like Granger causality</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h3>🎯 Key Learnings</h3>
+          <ul>
+            <li><strong>Emotional narrative can be forecastable, not just descriptive</strong></li>
+            <li><strong>Simpler models can outperform when signal > complexity</strong></li>
+            <li><strong>Data is more than numbers — it's cultural, contextual, and human</strong></li>
+          </ul>
+
+          <div style="background: var(--studio); padding: 20px; border-radius: 12px; border-left: 4px solid var(--rain-storm); margin: 20px 0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+            <p style="font-style: italic; margin: 0; color: #484848; font-size: 16px; line-height: 1.6;">
+              "This project fused everything I love — behavioral data, language, and machine learning — into one wild ride."
+            </p>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <h3>📈 Impact & Outcomes</h3>
+          <ul>
+            <li><strong>Validated sentiment as a predictive tool</strong> for short-term price movement</li>
+            <li><strong>Built a working prototype</strong> for multimodal sentiment tracking</li>
+            <li><strong>Discovered Reddit as a high-signal source</strong> for investor emotion</li>
+          </ul>
+
+          <p><strong>Next Step:</strong> Turning this prototype into a live sentiment product or plugin for investors and fintech tools.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>🛠️ Tools & Technologies</h3>
           <div class="tech-stack">
-            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Google Colab</span>
+            <span class="tech-pill">Yahoo Finance API</span>
+            <span class="tech-pill">Pushshift API</span>
+            <span class="tech-pill">BERTopic</span>
+            <span class="tech-pill">RoBERTa</span>
+            <span class="tech-pill">Scikit-Learn</span>
             <span class="tech-pill">TensorFlow</span>
-            <span class="tech-pill">NLP</span>
-            <span class="tech-pill">Data Visualization</span>
-            <span class="tech-pill">APIs</span>
+            <span class="tech-pill">ARIMA</span>
+            <span class="tech-pill">LSTM</span>
+            <span class="tech-pill">VADER Sentiment</span>
+            <span class="tech-pill">Google Trends API</span>
           </div>
         </div>
       `
-    },
-
+    }
+    
     'community-building': {
       tag: 'Leadership',
       title: 'Community Building',
