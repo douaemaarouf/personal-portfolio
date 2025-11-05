@@ -11,7 +11,8 @@ $(document).ready(function () {
   $("#close-menu").on("click", function () {
     console.log("Close menu clicked");
     $("#menu-modal").addClass("hidden");
-    $("body").removeClass("no-scroll");
+    $("body").removeClass
+    ("no-scroll");
   });
 
   $("#menu-modal").on("click", function (e) {
@@ -457,56 +458,1094 @@ $(document).ready(function () {
       `
     },
 
-    'branding': {
-      tag: 'Brand Strategy',
-      title: 'Big Red Buzz Series',
-      subtitle: 'Video content strategy that increased Cornell brand engagement by 300%',
-      content: `
-        <div class="case-section">
-          <h3>Challenge</h3>
-          <p>Cornell needed a fresh approach to showcase student life and academic programs that would resonate with prospective students and increase social media engagement.</p>
-        </div>
+'ai-jill': {
+  tag: 'AI & Audience',
+  title: 'Shop TODAY AI SMS Assistant',
+  subtitle: 'Reimagining shopping through conversation',
+  content: `
+  <div className="case-study">
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="container">
+          <h1>Shop TODAY AI SMS Assistant</h1>
+          <p className="subtitle">Reimagining shopping through conversation</p>
 
-        <div class="case-section">
-          <h3>Strategy</h3>
-          <p>I co-led the development of "Big Red Buzz," a video content series featuring authentic student stories and behind-the-scenes campus life.</p>
-          <ul>
-            <li>Developed content strategy and brand guidelines</li>
-            <li>Coordinated with 15+ student ambassadors</li>
-            <li>Created consistent visual identity across platforms</li>
-            <li>Managed production timeline and content calendar</li>
+          <div className="meta-grid">
+            <div className="meta-item">
+              <span className="meta-label">Duration</span>
+              <span className="meta-value">June–August 2025</span>
+            </div>
+            <div className="meta-item">
+              <span className="meta-label">My Role</span>
+              <span className="meta-value">Growth and product strategy, user research, journey mapping, prototyping, stakeholder storytelling</span>
+            </div>
+            <div className="meta-item">
+              <span className="meta-label">Team</span>
+              <span className="meta-value">NBC News Digital Growth Team</span>
+            </div>
+          </div>
+
+          {/* Hero Image - ADD YOUR SCREENSHOT HERE */}
+          <div className="hero-image-container">
+            <img
+              src="/path-to-your-hero-image.png"
+              alt="Shop TODAY AI SMS Assistant Interface"
+              className="hero-image"
+            />
+            {/* Placeholder if no image yet */}
+            <div className="image-placeholder">
+              [Add hero image/mockup of the SMS interface here]
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="team-section">
+        <div className="container">
+          <h2>Meet the Team</h2>
+          <h3 className="section-subtitle">Summer 2025 Growth Interns</h3>
+
+          <div className="team-grid">
+            <div className="team-member">
+              {/* ADD HEADSHOT HERE */}
+              <div className="headshot-container">
+                <img
+                  src="/path-to-cassandra-headshot.jpg"
+                  alt="Cassandra Calibo"
+                  className="headshot"
+                />
+                <div className="headshot-placeholder">[Headshot]</div>
+              </div>
+              <h4>Cassandra Calibo</h4>
+              <p className="role">User Experience Research Intern</p>
+            </div>
+
+            <div className="team-member">
+              {/* ADD HEADSHOT HERE */}
+              <div className="headshot-container">
+                <img
+                  src="/path-to-sydney-headshot.jpg"
+                  alt="Sydney Champagne"
+                  className="headshot"
+                />
+                <div className="headshot-placeholder">[Headshot]</div>
+              </div>
+              <h4>Sydney Champagne</h4>
+              <p className="role">SEO Intern</p>
+            </div>
+
+            <div className="team-member">
+              {/* ADD HEADSHOT HERE */}
+              <div className="headshot-container">
+                <img
+                  src="/path-to-douae-headshot.jpg"
+                  alt="Douae Maarouf"
+                  className="headshot"
+                />
+                <div className="headshot-placeholder">[Headshot]</div>
+              </div>
+              <h4>Douae Maarouf</h4>
+              <p className="role">Audience Development Intern</p>
+            </div>
+          </div>
+
+          <div className="partners-note">
+            <strong>Cross-functional partners:</strong> Growth Product Manager, Commerce Editorial Lead,
+            Engineering Feasibility Partner, UX Insights Team, Brand & Legal Advisors
+          </div>
+        </div>
+      </section>
+
+      {/* Context Section */}
+      <section className="context-section">
+        <div className="container">
+          <h2>Context: The Changing Landscape</h2>
+          <p className="lead">
+            The digital media landscape was shifting beneath our feet. At NBC News Digital, we observed
+            a fundamental change in how audiences discovered shopping content:
+          </p>
+
+          <p>
+            <strong>AI-driven overviews</strong> from Google and other search engines were now answering
+            product questions directly—without users ever clicking through to publisher sites. What used
+            to be a simple path (search → article → product) had become fragmented.
+          </p>
+
+          {/* ADD SCREENSHOT OF AI OVERVIEW HERE */}
+          <div className="image-container">
+            <img
+              src="/path-to-ai-overview-screenshot.png"
+              alt="Google AI Overview Impact"
+              className="content-image"
+            />
+            <div className="image-placeholder">
+              [Add screenshot of Google AI Overview showing how it intercepts search traffic]
+            </div>
+            <p className="image-caption">AI Overviews now answer shopping queries directly in search results</p>
+          </div>
+
+          <p>For TODAY.com, one of the most trusted sources for product recommendations, this meant:</p>
+          <ul className="impact-list">
+            <li>Declining organic search traffic to Shop TODAY content (63% drop post-AI Mode launch)</li>
+            <li>Fewer opportunities to guide users through our curated collections</li>
+            <li>Lost connections between our beloved hosts and their audiences</li>
           </ul>
-        </div>
 
-        <div class="case-stats">
-          <div class="stat-item-modal">
-            <span class="stat-number-modal">300%</span>
-            <span class="stat-label-modal">Engagement Increase</span>
+          {/* ADD TRAFFIC DECLINE CHART HERE */}
+          <div className="image-container">
+            <img
+              src="/path-to-traffic-chart.png"
+              alt="Shop TODAY Traffic Decline"
+              className="content-image"
+            />
+            <div className="image-placeholder">
+              [Add chart showing traffic decline from AI Overview impact]
+            </div>
+            <p className="image-caption">Shop TODAY traffic dropped 63% following AI Mode integration</p>
           </div>
-          <div class="stat-item-modal">
-            <span class="stat-number-modal">50K+</span>
-            <span class="stat-label-modal">Total Views</span>
+
+          <div className="highlight-box">
+            <p>
+              <strong>But we also saw an opportunity:</strong> our SMS channel was thriving. With $248K
+              in monthly revenue and loyal subscribers who trusted TODAY's voice, SMS represented a
+              high-intent, high-trust environment where we could rebuild that direct relationship.
+            </p>
           </div>
-          <div class="stat-item-modal">
-            <span class="stat-number-modal">12</span>
-            <span class="stat-label-modal">Episodes</span>
+
+          {/* ADD SMS REVENUE CHART HERE */}
+          <div className="image-container">
+            <img
+              src="/path-to-sms-revenue-chart.png"
+              alt="SMS Revenue Growth"
+              className="content-image"
+            />
+            <div className="image-placeholder">
+              [Add SMS revenue and engagement metrics chart]
+            </div>
+            <p className="image-caption">SMS emerged as a high-value, high-trust channel with strong engagement</p>
           </div>
         </div>
+      </section>
 
-        <div class="case-section">
-          <h3>Impact</h3>
-          <p>The series became Cornell's most successful social media campaign, leading to increased campus visit requests and improved brand perception among target demographics.</p>
+      {/* Problem Section */}
+      <section className="problem-section">
+        <div className="container">
+          <h2>The Problem</h2>
+          <p className="lead">
+            Through stakeholder interviews and audience research, we identified three core challenges:
+          </p>
 
-          <h3>Tools Used</h3>
-          <div class="tech-stack">
-            <span class="tech-pill">Adobe Premiere</span>
-            <span class="tech-pill">Photoshop</span>
-            <span class="tech-pill">Social Media Analytics</span>
-            <span class="tech-pill">Content Strategy</span>
+          <div className="problem-grid">
+            <div className="problem-card">
+              <div className="problem-number">1</div>
+              <h3>Discovery Friction</h3>
+              <p>
+                Users struggled to find specific products within TODAY.com's vast shopping ecosystem.
+                With multiple hosts, hundreds of articles, and constantly refreshing deals, even loyal
+                readers faced choice paralysis.
+              </p>
+              <blockquote className="user-quote">
+                "I love Jill Martin, but when I need something specific, I end up just searching Google
+                and hoping I find the right TODAY article."
+                <cite>— User Interview</cite>
+              </blockquote>
+            </div>
+
+            <div className="problem-card">
+              <div className="problem-number">2</div>
+              <h3>Loss of Connection</h3>
+              <p>
+                AI search summaries were intercepting queries that previously led to TODAY.com, breaking
+                the direct relationship between trusted hosts and their audiences.
+              </p>
+            </div>
+
+            <div className="problem-card">
+              <div className="problem-number">3</div>
+              <h3>Generic Experience</h3>
+              <p>
+                The site offered the same browsing experience to everyone—whether you were a first-time
+                visitor or someone who watched Steals & Deals every week. There was no memory, no
+                personalization, no sense of ongoing relationship.
+              </p>
+            </div>
+          </div>
+
+          {/* ADD SCREENSHOT OF SITE NAVIGATION HERE */}
+          <div className="image-container">
+            <img
+              src="/path-to-site-navigation.png"
+              alt="TODAY.com Shopping Experience"
+              className="content-image"
+            />
+            <div className="image-placeholder">
+              [Add screenshot showing current TODAY.com shopping navigation/experience]
+            </div>
+            <p className="image-caption">The existing browsing experience lacked personalization and guidance</p>
+          </div>
+
+          <div className="insight-box">
+            <strong>The core insight:</strong> People trust TODAY's hosts, but they needed a way to
+            access that expertise <em>in the moment</em>—conversationally, personally, and without friction.
           </div>
         </div>
-      `
-    },
+      </section>
+
+      {/* Research Section */}
+      <section className="research-section">
+        <div className="container">
+          <h2>Research & Discovery</h2>
+          <h3>Understanding the Landscape</h3>
+          <p>We conducted a three-part research sprint:</p>
+
+          <div className="research-phase">
+            <h4>1. Stakeholder Alignment Workshops</h4>
+            <p>
+              We interviewed teams across Growth, Commerce, SEO, Editorial, Product, and Brand to map
+              constraints and opportunities:
+            </p>
+            <ul>
+              <li>Editorial needed tone and safety guardrails</li>
+              <li>Commerce wanted attribution clarity for DTR links</li>
+              <li>Growth sought opt-in mechanisms that felt premium, not spammy</li>
+              <li>Legal required TCPA compliance and clear opt-out paths</li>
+            </ul>
+          </div>
+
+          <div className="research-phase">
+            <h4>2. Competitive Analysis</h4>
+            <p>We studied conversational AI implementations across categories:</p>
+
+            {/* ADD COMPETITIVE ANALYSIS SCREENSHOTS HERE */}
+            <div className="competitive-grid">
+              <div className="competitive-item">
+                <div className="image-container">
+                  <img
+                    src="/path-to-meta-ai-screenshot.png"
+                    alt="Meta AI Personas"
+                    className="content-image"
+                  />
+                  <div className="image-placeholder">[Meta AI Personas Screenshot]</div>
+                </div>
+                <h5>Meta's AI Personas (2024)</h5>
+                <p>
+                  Celebrity-voiced chatbots showed that users respond to familiar personalities, but
+                  authenticity concerns arose when tone felt "off"
+                </p>
+              </div>
+
+              <div className="competitive-item">
+                <div className="image-container">
+                  <img
+                    src="/path-to-nbc-sports-screenshot.png"
+                    alt="NBC Sports Jim Fagan AI"
+                    className="content-image"
+                  />
+                  <div className="image-placeholder">[NBC Sports Jim Fagan Screenshot]</div>
+                </div>
+                <h5>NBC Sports + Jim Fagan's AI Voice</h5>
+                <p>
+                  Demonstrated internal precedent for using talent voice with family consent for
+                  promotional content
+                </p>
+              </div>
+
+              <div className="competitive-item">
+                <div className="image-container">
+                  <img
+                    src="/path-to-apple-business-chat.png"
+                    alt="Apple Business Chat"
+                    className="content-image"
+                  />
+                  <div className="image-placeholder">[Apple Business Chat Screenshot]</div>
+                </div>
+                <h5>Apple Business Chat & Grammarly</h5>
+                <p>
+                  Best practices for escalation, context persistence, and graceful failure states
+                </p>
+              </div>
+            </div>
+
+            <div className="key-insight">
+              <strong>Key insight:</strong> Users valued <em>assistive</em> AI that enhanced human
+              expertise, not replaced it.
+            </div>
+          </div>
+
+          <div className="research-phase">
+            <h4>3. User Interviews (n=6)</h4>
+            <p>
+              We spoke with loyal TODAY.com users (ages 39-65, all female, household income $40K–$200K+)
+              about their shopping habits.
+            </p>
+
+            {/* ADD USER INTERVIEW PHOTOS/ARTIFACTS HERE */}
+            <div className="image-container">
+              <img
+                src="/path-to-user-interviews.png"
+                alt="User Interview Insights"
+                className="content-image"
+              />
+              <div className="image-placeholder">
+                [Add photo/artifact from user interview sessions or synthesis board]
+              </div>
+              <p className="image-caption">User interview synthesis revealed key needs and pain points</p>
+            </div>
+
+            <h5>What We Learned:</h5>
+
+            <div className="quotes-grid">
+              <blockquote className="user-quote-large">
+                "I like her. She's very personable... She makes me smile, she makes me laugh."
+                <cite>— Debby, 65, on Jill Martin</cite>
+              </blockquote>
+
+              <blockquote className="user-quote-large">
+                "I feel like I'm being met with my best friend who's informing me of the latest sales."
+                <cite>— Lara, 44</cite>
+              </blockquote>
+
+              <blockquote className="user-quote-large">
+                "It's something I'd be highly likely to subscribe to, probably even pay for...
+                To have one source would really help a ton."
+                <cite>— Anonymous User, 39</cite>
+              </blockquote>
+            </div>
+
+            <div className="findings-box">
+              <h5>Users wanted:</h5>
+              <ul>
+                <li>Ratings, reviews, and social proof</li>
+                <li>Images and rich descriptions</li>
+                <li>Price comparisons and deal alerts</li>
+                <li>Personalization based on past behavior</li>
+                <li>A loyalty program or save-for-later feature</li>
+                <li>Multiple options, not just one recommendation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Strategic Approach Section */}
+      <section className="strategy-section">
+        <div className="container">
+          <h2>Strategic Approach</h2>
+
+          <div className="hypothesis-box">
+            <h3>Our Hypothesis</h3>
+            <p>
+              <em>Loyal TODAY consumers will benefit from a curated, two-way SMS experience that makes
+              it easier to discover and purchase products. By reducing friction, re-engaging bounced users,
+              and building on existing brand trust, an AI shopping assistant can support conversions and
+              drive long-term retention.</em>
+            </p>
+          </div>
+
+          <h3>Why SMS?</h3>
+          <p>SMS was already TODAY's second-highest revenue driver after QR codes:</p>
+
+          {/* ADD SMS METRICS VISUALIZATION HERE */}
+          <div className="image-container">
+            <img
+              src="/path-to-sms-metrics.png"
+              alt="SMS Performance Metrics"
+              className="content-image"
+            />
+            <div className="image-placeholder">
+              [Add SMS performance metrics: revenue, engagement, repeat visitor stats]
+            </div>
+            <p className="image-caption">SMS demonstrated strong performance and user loyalty</p>
+          </div>
+
+          <ul className="stats-list">
+            <li><strong>$248K</strong> monthly revenue (July 2025)</li>
+            <li><strong>23%</strong> of 4+ repeat visitors come from SMS</li>
+            <li><strong>22%</strong> of returning clicks are SMS-driven</li>
+            <li>Open rates and engagement far exceed email</li>
+          </ul>
+
+          <div className="strategic-bet-box">
+            <h4>The strategic bet:</h4>
+            <p>
+              Meet users where they already trust us, then extend that trust through conversational AI
+              anchored in host expertise.
+            </p>
+          </div>
+
+          <h3>Design Principles</h3>
+          <div className="principles-grid">
+            <div className="principle-card">
+              <span className="principle-number">1</span>
+              <h4>Personality-first</h4>
+              <p>Leverage Jill Martin's trusted voice and shopping authority</p>
+            </div>
+            <div className="principle-card">
+              <span className="principle-number">2</span>
+              <h4>Assistive, not automated</h4>
+              <p>Offer guidance, not generic answers</p>
+            </div>
+            <div className="principle-card">
+              <span className="principle-number">3</span>
+              <h4>Ecosystem integration</h4>
+              <p>Route users to curated articles <em>and</em> direct-to-retailer links</p>
+            </div>
+            <div className="principle-card">
+              <span className="principle-number">4</span>
+              <h4>Privacy & control</h4>
+              <p>Clear opt-ins, easy opt-outs, no creepy tracking</p>
+            </div>
+            <div className="principle-card">
+              <span className="principle-number">5</span>
+              <h4>Editorial safety</h4>
+              <p>Guardrails to ensure brand integrity</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Design Process Section */}
+      <section className="design-process-section">
+        <div className="container">
+          <h2>Design Process</h2>
+
+          <div className="process-step">
+            <h3>1. Host Persona Development</h3>
+            <p>We created detailed profiles for two potential SMS personalities:</p>
+
+            {/* ADD PERSONA CARDS HERE */}
+            <div className="persona-grid">
+              <div className="persona-card">
+                <div className="image-container">
+                  <img
+                    src="/path-to-jill-martin-persona.png"
+                    alt="Jill Martin Persona"
+                    className="content-image"
+                  />
+                  <div className="image-placeholder">[Jill Martin Persona Card]</div>
+                </div>
+                <h4>Jill Martin</h4>
+                <ul>
+                  <li><strong>Role:</strong> Host of Steals & Deals on TODAY</li>
+                  <li><strong>Personality:</strong> Direct, enthusiastic, value-driven, trustworthy</li>
+                  <li><strong>Tone:</strong> "This deal won't last" / "We've never seen it before on the show"</li>
+                  <li><strong>Product focus:</strong> Flash sales, bundles, seasonal promos, gifts</li>
+                </ul>
+              </div>
+
+              <div className="persona-card">
+                <div className="image-container">
+                  <img
+                    src="/path-to-buddy-persona.png"
+                    alt="Shop TODAY Buddy Persona"
+                    className="content-image"
+                  />
+                  <div className="image-placeholder">[Shop TODAY Buddy Persona Card]</div>
+                </div>
+                <h4>Shop TODAY Buddy</h4>
+                <p className="persona-note">(neutral alternative)</p>
+                <ul>
+                  <li>For users who didn't resonate with Jill's personality</li>
+                  <li>Friendly, helpful, generic assistant</li>
+                  <li>Avoided legal/rights issues around talent identity</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="process-step">
+            <h3>2. Conversation Design</h3>
+            <p>We mapped:</p>
+
+            {/* ADD CONVERSATION FLOW DIAGRAM HERE */}
+            <div className="image-container">
+              <img
+                src="/path-to-conversation-flows.png"
+                alt="Conversation Flow Diagram"
+                className="content-image"
+              />
+              <div className="image-placeholder">
+                [Add conversation flow diagram showing intents, branches, and escalation paths]
+              </div>
+              <p className="image-caption">Conversation design mapping user intents and system responses</p>
+            </div>
+
+            <ul>
+              <li><strong>User intents:</strong> Find a product, ask a question, get deal alerts, compare options</li>
+              <li><strong>Guardrails:</strong> What to do when the assistant doesn't know, how to escalate, how to handle out-of-scope requests</li>
+              <li><strong>Tone sliders:</strong> Adjusting formality, urgency, and warmth based on context</li>
+              <li><strong>Escalation paths:</strong> When to loop in human support or redirect to web</li>
+            </ul>
+          </div>
+
+          <div className="process-step">
+            <h3>3. User Journey Mapping</h3>
+            <p>We designed flows for:</p>
+
+            {/* ADD USER JOURNEY MAPS HERE */}
+            <div className="journey-grid">
+              <div className="image-container">
+                <img
+                  src="/path-to-logged-in-journey.png"
+                  alt="Logged-in User Journey"
+                  className="content-image"
+                />
+                <div className="image-placeholder">[Logged-in User Journey Map]</div>
+                <p className="image-caption">Journey for existing TODAY account holders</p>
+              </div>
+
+              <div className="image-container">
+                <img
+                  src="/path-to-new-user-journey.png"
+                  alt="New User Journey"
+                  className="content-image"
+                />
+                <div className="image-placeholder">[New User Journey Map]</div>
+                <p className="image-caption">Journey for new users via QR codes and CTAs</p>
+              </div>
+            </div>
+
+            <div className="sample-journey">
+              <h4>Sample Journey:</h4>
+              <ol>
+                <li>User sees Jill mention a product on air</li>
+                <li>Scans QR code → lands on TODAY.com</li>
+                <li>Popup: "Chat with Jill's AI shopping assistant?"</li>
+                <li>Opts in via phone number</li>
+                <li>Receives welcome text with quick action menu</li>
+                <li>Asks, "Do you have summer dresses under $50?"</li>
+                <li>Assistant responds with curated picks + DTR links + article link</li>
+                <li>User clicks through, purchases, gets follow-up thank-you + related recommendation</li>
+              </ol>
+            </div>
+          </div>
+
+          <div className="process-step">
+            <h3>4. Prototyping</h3>
+            <p>We built high-fidelity mockups in Figma, including:</p>
+
+            {/* ADD PROTOTYPE SCREENSHOTS HERE */}
+            <div className="prototype-showcase">
+              <div className="image-container large">
+                <img
+                  src="/path-to-imessage-prototype.png"
+                  alt="iMessage Prototype"
+                  className="content-image"
+                />
+                <div className="image-placeholder">
+                  [Add high-fidelity Figma prototype screenshots of the iMessage interface]
+                </div>
+                <p className="image-caption">High-fidelity iMessage prototype with realistic interactions</p>
+              </div>
+
+              <div className="prototype-features-grid">
+                <div className="image-container">
+                  <img
+                    src="/path-to-memoji.png"
+                    alt="Jill Martin Memoji"
+                    className="content-image"
+                  />
+                  <div className="image-placeholder">[Jill Memoji]</div>
+                  <p className="feature-label">Custom Memoji avatar</p>
+                </div>
+
+                <div className="image-container">
+                  <img
+                    src="/path-to-product-cards.png"
+                    alt="Product Cards"
+                    className="content-image"
+                  />
+                  <div className="image-placeholder">[Product Cards]</div>
+                  <p className="feature-label">Rich product cards with images and CTAs</p>
+                </div>
+
+                <div className="image-container">
+                  <img
+                    src="/path-to-quick-replies.png"
+                    alt="Quick Reply Chips"
+                    className="content-image"
+                  />
+                  <div className="image-placeholder">[Quick Reply Chips]</div>
+                  <p className="feature-label">Quick-reply chips for common queries</p>
+                </div>
+
+                <div className="image-container">
+                  <img
+                    src="/path-to-failure-states.png"
+                    alt="Graceful Failures"
+                    className="content-image"
+                  />
+                  <div className="image-placeholder">[Failure States]</div>
+                  <p className="feature-label">Graceful failure messages</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section className="solution-section">
+        <div className="container">
+          <h2>The Solution: AI Jill on iMessage</h2>
+          <p className="lead">
+            An SMS-based shopping companion that acts like an on-demand version of Jill Martin.
+          </p>
+
+          {/* ADD FINAL SOLUTION MOCKUP HERE */}
+          <div className="image-container hero">
+            <img
+              src="/path-to-final-solution.png"
+              alt="AI Jill SMS Interface"
+              className="content-image"
+            />
+            <div className="image-placeholder">
+              [Add polished final mockup of the AI Jill SMS experience]
+            </div>
+            <p className="image-caption">The complete AI Jill SMS shopping assistant experience</p>
+          </div>
+
+          <h3>Key Features</h3>
+
+          <div className="features-section">
+            <h4>For TODAY Account Holders (Premium Experience)</h4>
+            <ul className="feature-list">
+              <li>Opt-in SMS program with clear privacy terms</li>
+              <li>AI agent with Jill Martin's personality and voice</li>
+              <li>Tracks site interactions → personalized recommendations</li>
+              <li>Two-way commerce: Ask questions, get answers, follow DTR links</li>
+              <li>Traditional one-way deal blasts with Jill's tone</li>
+            </ul>
+
+            {/* ADD FEATURE SCREENSHOTS HERE */}
+            <div className="feature-showcase-grid">
+              <div className="image-container">
+                <img
+                  src="/path-to-personalization.png"
+                  alt="Personalized Recommendations"
+                  className="content-image"
+                />
+                <div className="image-placeholder">[Personalization Feature]</div>
+                <p className="image-caption">Personalized product recommendations based on browsing history</p>
+              </div>
+
+              <div className="image-container">
+                <img
+                  src="/path-to-deal-alerts.png"
+                  alt="Deal Alerts"
+                  className="content-image"
+                />
+                <div className="image-placeholder">[Deal Alerts]</div>
+                <p className="image-caption">Real-time deal alerts in Jill's signature style</p>
+              </div>
+            </div>
+
+            <h4>Core Capabilities:</h4>
+            <ul className="capability-list">
+              <li>Retrieve products from Shop TODAY catalogue</li>
+              <li>Answer product questions (colors, sizes, availability)</li>
+              <li>Offer alternatives when queries can't be answered</li>
+              <li>Send price-drop and restock alerts</li>
+              <li>Create a "save for later" list</li>
+            </ul>
+
+            <h4>Technical Specs:</h4>
+            <ul className="tech-list">
+              <li>Custom Memoji for visual identity</li>
+              <li>Natural language understanding via LLM (Claude, GPT-4)</li>
+              <li>Integration with CMS product feed and session data</li>
+              <li>SMS delivery via CPaaS platform (e.g., Twilio, Postscript)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Testing Section */}
+      <section className="testing-section">
+        <div className="container">
+          <h2>User Testing & Validation</h2>
+          <p className="lead">We conducted 8 moderated usability sessions with target users.</p>
+
+          {/* ADD TESTING PHOTOS HERE */}
+          <div className="image-container">
+            <img
+              src="/path-to-testing-sessions.png"
+              alt="User Testing Sessions"
+              className="content-image"
+            />
+            <div className="image-placeholder">
+              [Add photos or screenshots from user testing sessions]
+            </div>
+            <p className="image-caption">Moderated usability testing with target users</p>
+          </div>
+
+          <h3>What We Tested</h3>
+          <ul>
+            <li><strong>Persona clarity:</strong> Did users understand who "Jill" was?</li>
+            <li><strong>Task completion:</strong> Could users find a product, ask follow-ups, and purchase?</li>
+            <li><strong>Tone fit:</strong> Did the voice feel authentic and trustworthy?</li>
+            <li><strong>Opt-out clarity:</strong> Could users easily unsubscribe?</li>
+          </ul>
+
+          <h3>Key Findings</h3>
+          <div className="findings-grid">
+            <div className="finding-card success">
+              <span className="finding-icon">✅</span>
+              <h4>Persona clarity beats cleverness</h4>
+              <p>Simple labels like "Shop with Jill" &gt; playful names</p>
+            </div>
+
+            <div className="finding-card success">
+              <span className="finding-icon">✅</span>
+              <h4>Quick replies reduce drop-off</h4>
+              <p>Chips like "Under $50" or "Summer dresses" sped up decision-making</p>
+            </div>
+
+            <div className="finding-card success">
+              <span className="finding-icon">✅</span>
+              <h4>Make hand-offs obvious</h4>
+              <p>A single, bold "Open on TODAY.com" button worked best</p>
+            </div>
+
+            <div className="finding-card success">
+              <span className="finding-icon">✅</span>
+              <h4>Consent copy drives trust</h4>
+              <p>Friendly, direct, "opt-out anytime" language tested highest</p>
+            </div>
+          </div>
+
+          {/* ADD BEFORE/AFTER ITERATION SCREENSHOTS HERE */}
+          <div className="iterations-showcase">
+            <h3>Iterations Based on Feedback</h3>
+
+            <div className="image-container comparison">
+              <img
+                src="/path-to-before-after.png"
+                alt="Design Iterations"
+                className="content-image"
+              />
+              <div className="image-placeholder">
+                [Add before/after comparison showing key design iterations]
+              </div>
+              <p className="image-caption">Key design iterations based on user feedback</p>
+            </div>
+
+            <ul className="iteration-list">
+              <li>Revised IA to surface quick actions earlier</li>
+              <li>Clarified consent copy with plain-language privacy statement</li>
+              <li>Simplified persona choice to binary (Jill vs. Buddy)</li>
+              <li>Added quick-reply chips to reduce typing friction</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Section */}
+      <section className="impact-section">
+        <div className="container">
+          <h2>Impact & Outcomes</h2>
+
+          <h3>Immediate Value Delivered</h3>
+
+          <div className="impact-grid">
+            <div className="impact-card">
+              <h4>For the Business</h4>
+              <ul>
+                <li>Created a scalable framework for AI-driven engagement across NBC News properties</li>
+                <li>Positioned TODAY as a leader in conversational commerce within the organization</li>
+                <li>Aligned Growth, Commerce, and Product teams around shared personalization goals</li>
+              </ul>
+            </div>
+
+            <div className="impact-card">
+              <h4>For Users</h4>
+              <ul>
+                <li>Reduced friction from search → discovery → purchase</li>
+                <li>Offered personalized, on-demand access to trusted shopping advice</li>
+                <li>Maintained brand trust through transparent opt-ins and editorial guardrails</li>
+              </ul>
+            </div>
+
+            <div className="impact-card">
+              <h4>For Leadership</h4>
+              <p>The prototype catalyzed strategic conversations about:</p>
+              <ul>
+                <li>AI integration across NBC News Digital</li>
+                <li>Personalization as a pillar of the upcoming TODAY subscription product</li>
+                <li>Host-led content as a differentiator in an AI-saturated landscape</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* ADD PRESENTATION PHOTO HERE */}
+          <div className="image-container">
+            <img
+              src="/path-to-leadership-presentation.png"
+              alt="Leadership Presentation"
+              className="content-image"
+            />
+            <div className="image-placeholder">
+              [Add photo from leadership presentation or key slide]
+            </div>
+            <p className="image-caption">Presenting the concept to NBC News Digital leadership team</p>
+          </div>
+
+          <h3>Presentation to Senior Leadership</h3>
+          <p>
+            In August 2025, we presented the AI SMS Assistant concept to NBC News Digital's executive team.
+            The response was enthusiastic—leadership saw this as a pilot that could:
+          </p>
+          <ul>
+            <li>Inform broader personalization strategies for the forthcoming TODAY subscription launch</li>
+            <li>Demonstrate how AI could enhance (not replace) editorial expertise</li>
+            <li>Create a repeatable playbook for host-led digital experiences</li>
+          </ul>
+
+          <h3>Proposed Success Metrics</h3>
+          <div className="metrics-grid">
+            <div className="metric-card">
+              <span className="metric-icon">📈</span>
+              <h4>Opt-in rate</h4>
+              <p>from overlays and QR codes</p>
+            </div>
+            <div className="metric-card">
+              <span className="metric-icon">⚡</span>
+              <h4>First reply time</h4>
+              <p>and task completion rate</p>
+            </div>
+            <div className="metric-card">
+              <span className="metric-icon">🔗</span>
+              <h4>Click-through rate</h4>
+              <p>to DTR links vs. back-to-content</p>
+            </div>
+            <div className="metric-card">
+              <span className="metric-icon">🔄</span>
+              <h4>Re-engagement</h4>
+              <p>on price-drop/restock alerts</p>
+            </div>
+            <div className="metric-card">
+              <span className="metric-icon">😊</span>
+              <h4>User satisfaction</h4>
+              <p>and unsubscribe rate</p>
+            </div>
+            <div className="metric-card">
+              <span className="metric-icon">👤</span>
+              <h4>Account creation</h4>
+              <p>for premium features</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What's Next Section */}
+      <section className="next-steps-section">
+        <div className="container">
+          <h2>What's Next</h2>
+          <h3 className="section-subtitle">Roadmap to Pilot</h3>
+
+          <div className="roadmap">
+            <div className="roadmap-phase">
+              <div className="phase-badge">Phase 1</div>
+              <h4>Internal Validation (Q4 2025)</h4>
+              <ul>
+                <li>Present final concept, system architecture, and pilot plan to senior leadership</li>
+                <li>Align with Subscriptions team on how account creation and preferences unlock premium SMS features</li>
+                <li>Define technical requirements and vendor evaluation (Postscript AI, custom build, or hybrid)</li>
+              </ul>
+            </div>
+
+            <div className="roadmap-phase">
+              <div className="phase-badge">Phase 2</div>
+              <h4>Limited Pilot (Q1 2026)</h4>
+              <ul>
+                <li>Launch with 1,000 highly engaged SMS subscribers</li>
+                <li>Test "Jill" persona only to simplify scope</li>
+                <li>Collect signal on: usefulness, tone fit, opt-in quality, retention, revenue impact</li>
+              </ul>
+            </div>
+
+            <div className="roadmap-phase">
+              <div className="phase-badge">Phase 3</div>
+              <h4>Iterate & Expand (Q2 2026)</h4>
+              <ul>
+                <li>Add "Shop TODAY Buddy" if persona mapping supports it</li>
+                <li>Integrate with TODAY Accounts and preference center</li>
+                <li>Explore additional hosts (Adrianna Brach, Savannah Guthrie)</li>
+                <li>Scale to broader SMS list if pilot succeeds</li>
+              </ul>
+            </div>
+
+            <div className="roadmap-phase">
+              <div className="phase-badge">Phase 4</div>
+              <h4>Ecosystem Integration (H2 2026)</h4>
+              <ul>
+                <li>Extend to other NBC News properties (MSNBC, NBC News NOW)</li>
+                <li>Explore voice assistant integration (Alexa, Google Assistant)</li>
+                <li>Build two-way sync with TODAY.com for seamless cross-platform personalization</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* ADD ROADMAP VISUALIZATION HERE */}
+          <div className="image-container">
+            <img
+              src="/path-to-roadmap-visual.png"
+              alt="Implementation Roadmap"
+              className="content-image"
+            />
+            <div className="image-placeholder">
+              [Add Gantt chart or timeline visualization of implementation roadmap]
+            </div>
+            <p className="image-caption">Phased rollout plan from pilot to full ecosystem integration</p>
+          </div>
+        </div>
+      </section>
+
+      {/* System Architecture Section */}
+      <section className="architecture-section">
+        <div className="container">
+          <h2>System Architecture Overview</h2>
+
+          <div className="architecture-link-card">
+            <p>
+              View the complete system architecture diagram showing data flow, integrations,
+              and technical implementation:
+            </p>
+            <a
+              href="/path-to-system-architecture-screenshot.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="architecture-link"
+            >
+              <span className="link-icon">🔗</span>
+              View Full System Architecture
+            </a>
+          </div>
+
+          {/* THUMBNAIL OF ARCHITECTURE HERE */}
+          <div className="image-container">
+            <a href="/path-to-system-architecture-screenshot.png" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/path-to-system-architecture-screenshot.png"
+                alt="System Architecture Diagram"
+                className="content-image clickable"
+              />
+              <div className="image-placeholder">
+                [Add system architecture diagram - click to view full size]
+              </div>
+            </a>
+            <p className="image-caption">System architecture showing client, communication layer, server, data layer, and AI engine</p>
+          </div>
+
+          <div className="architecture-summary">
+            <h4>Key Components:</h4>
+            <ul>
+              <li><strong>Client:</strong> User phone (SMS interface)</li>
+              <li><strong>Communication Layer:</strong> SMS API (Twilio/Postscript)</li>
+              <li><strong>Server:</strong> Constructs prompts, routes queries</li>
+              <li><strong>Data Layer:</strong> User profile DB (Postgres), CMS product feed, session data (Redis)</li>
+              <li><strong>AI Engine:</strong> LLM (Claude, GPT-4)</li>
+              <li><strong>Analytics:</strong> DOMO dashboards for KPIs</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Reflections Section */}
+      <section className="reflections-section">
+        <div className="container">
+          <h2>Reflections</h2>
+
+          <div className="reflection-grid">
+            <div className="reflection-card">
+              <h3>What I'd Do Differently</h3>
+
+              <div className="reflection-item">
+                <h4>1. Moment-based entry points</h4>
+                <p>
+                  I'd explore triggering the assistant from specific article contexts (e.g., "Ask Jill
+                  about this product") rather than only at account signup.
+                </p>
+              </div>
+
+              <div className="reflection-item">
+                <h4>2. Memory & re-entry</h4>
+                <p>
+                  Enable the assistant to recall the last task or saved items (with privacy controls)
+                  to reduce repetitive setup.
+                </p>
+              </div>
+
+              <div className="reflection-item">
+                <h4>3. Accessibility from the start</h4>
+                <p>
+                  Design voice control paths and high-contrast modes for low-vision users earlier in
+                  the process.
+                </p>
+              </div>
+            </div>
+
+            <div className="reflection-card">
+              <h3>What I Learned</h3>
+
+              <div className="learning-item">
+                <p>
+                  <strong>Conversational design is hard.</strong> Anticipating every user intent and
+                  failure state requires deep empathy and iteration.
+                </p>
+              </div>
+
+              <div className="learning-item">
+                <p>
+                  <strong>AI needs guardrails, not just prompts.</strong> Editorial oversight and
+                  escalation rules are what make AI feel trustworthy, not just "smart."
+                </p>
+              </div>
+
+              <div className="learning-item">
+                <p>
+                  <strong>Personalization is a promise, not a feature.</strong> Users expect systems
+                  to remember them—but only if we're transparent about what we track and why.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Project Status Footer */}
+      <section className="project-status">
+        <div className="container">
+          <div className="status-card">
+            <h3>Project Status</h3>
+            <p>
+              <strong>Prototype complete</strong>, pilot roadmap defined, awaiting Q4 2025 leadership
+              review and subscriptions alignment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation to Other Work */}
+      <section className="navigation-footer">
+        <div className="container">
+          <div className="nav-links">
+            <a href="#previous-project" className="nav-link prev">
+              ← Previous Project
+            </a>
+            <a href="#all-work" className="nav-link">
+              All Work
+            </a>
+            <a href="#next-project" className="nav-link next">
+              Next Project →
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    `
+  },
 
     'ux-design': {
       tag: 'UX Design',
@@ -1012,6 +2051,16 @@ $(document).ready(function () {
       return 'data-analysis';
     }
 
+    if (allContent.includes('jill') ||
+      allContent.includes('nbcu') ||
+      allContent.includes('nbcuniversal') ||
+      allContent.includes('today show') ||
+      allContent.includes('ai intern') ||
+      allContent.includes('ai & audience') ||
+      allContent.includes('ai project')) {
+    console.log("Detected: AI JILL case");
+    return 'ai-jill';
+}
     if (allContent.includes('mcci') ||
         allContent.includes('email automation') ||
         allContent.includes('automation workflow') ||
